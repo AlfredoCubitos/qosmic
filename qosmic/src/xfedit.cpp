@@ -350,7 +350,7 @@ void FigureEditor::removeTriangleAction()
 Triangle* FigureEditor::getCurrentOrSelected()
 {
 	Triangle* t;
-	QGraphicsItem* item = itemAt(moving_start);
+    QGraphicsItem* item = itemAt(moving_start,QTransform() );
 	if (menu_visible && item)
 	{
 		switch (item->type())
@@ -374,7 +374,7 @@ Triangle* FigureEditor::getCurrentOrSelected()
 void FigureEditor::resetTriangleCoordsAction()
 {
 	Triangle* t = selectedTriangle;
-	QGraphicsItem* item = itemAt(moving_start);
+    QGraphicsItem* item = itemAt(moving_start,QTransform());
 	if (hasFocus() && menu_visible && item)
 	{
 		switch (item->type())
@@ -442,7 +442,7 @@ void FigureEditor::mousePressEvent(QGraphicsSceneMouseEvent* e)
 	}
 	else // LeftButton, possibly with control+shift modifiers
 	{
-		QGraphicsItem* item = itemAt(moving_start);
+        QGraphicsItem* item = itemAt(moving_start,QTransform());
 		if (item == infoItem) // skip the infoItem if possible
 		{
 			QList<QGraphicsItem*> list = items(moving_start);
@@ -605,7 +605,7 @@ void FigureEditor::mouseMoveEvent(QGraphicsSceneMouseEvent* e)
 
 	qreal dx( scenePos.x() - moving_start.x() );
 	qreal dy( scenePos.y() - moving_start.y() );
-	QGraphicsItem* item = itemAt(scenePos);
+    QGraphicsItem* item = itemAt(scenePos,QTransform());
 
 	if ( moving )
 	{
@@ -928,7 +928,7 @@ void FigureEditor::mouseMoveEvent(QGraphicsSceneMouseEvent* e)
 void FigureEditor::wheelEvent(QGraphicsSceneWheelEvent* e)
 {
 	QPointF p = e->scenePos();
-	QGraphicsItem* item = itemAt(p);
+    QGraphicsItem* item = itemAt(p,QTransform());
 	if (item)
 	{
 		switch (item->type())
@@ -1686,9 +1686,12 @@ void FigureEditor::scaleBasis(double dx, double dy)
 	{
 		QTransform trans = selectionItem->transform();
 		QPointF cpos(selectionItem->pos());
-		selectionItem->translate(cpos.x(), cpos.y());
-		selectionItem->QGraphicsPolygonItem::scale(dx, dy);
-		selectionItem->translate(-cpos.x(), -cpos.y());
+//		selectionItem->translate(cpos.x(), cpos.y());
+        selectionItem->setTransform(QTransform::fromTranslate(cpos.x(), cpos.y()), true);
+        // selectionItem->QGraphicsPolygonItem::scale(dx, dy);
+        selectionItem->setTransform(QTransform::fromScale(dx, dy), true);
+        // selectionItem->translate(-cpos.x(), -cpos.y());
+        selectionItem->setTransform(QTransform::fromTranslate(-cpos.x(), -cpos.y()), true);
 		QPolygonF pa = selectionItem->mapToScene(selectionItem->polygon());
 		selectionItem->setTransform(trans);
 		selectionItem->setPolygon(pa);

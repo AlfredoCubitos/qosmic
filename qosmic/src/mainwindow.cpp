@@ -504,7 +504,8 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	logInfo("MainWindow::closeEvent : saving current genome");
 	Flam3FileStream::autoSave(&genomes, GenomeVector::SaveOnExit | GenomeVector::AlwaysSave);
 	m_rthread->stopRendering();
-	m_rthread->running = false;
+    m_rthread->running = false;
+
 
 	writeSettings();
 	// call close() on dock widgets so they can save settings if needed

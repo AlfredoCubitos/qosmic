@@ -43,7 +43,8 @@ void TriangleSelection::moveBy( double dx, double dy )
 	foreach(NodeItem* node, m_nodes)
 		node->moveBy(dx,dy);
 	QTransform trans = transform();
-	translate(dx, dy);
+    // translate(dx, dy);
+    setTransform(QTransform::fromTranslate(dx, dy), true);
 	QPolygonF pa;
 	foreach (QPointF p, polygon())
 		pa << mapToScene(p);
@@ -57,9 +58,12 @@ void TriangleSelection::rotate( double rad, QPointF cpos )
 	foreach (Triangle* t, m_triangles)
 		t->rotate(rad, t->mapFromItem(this, cpos));
 	QTransform trans = transform();
-	translate(cpos.x(), cpos.y());
-	QGraphicsPolygonItem::rotate(-rad);
-	translate(-cpos.x(), -cpos.y());
+    // translate(cpos.x(), cpos.y());
+    setTransform(QTransform::fromTranslate(cpos.x(), cpos.y()), true);
+    // QGraphicsPolygonItem::rotate(-rad);
+    trans.rotate(-rad);
+    // translate(-cpos.x(), -cpos.y());
+    setTransform(QTransform::fromTranslate(-cpos.x(), -cpos.y()), true);
 	QPolygonF pa(mapToScene(polygon()));
 	foreach (NodeItem* n, m_nodes)
 	{
@@ -77,9 +81,12 @@ void TriangleSelection::scale( double dx, double dy, QPointF cpos )
 	foreach (Triangle* t, m_triangles)
 		t->scale(dx, dy, t->mapFromItem(this, cpos));
 	QTransform trans = transform();
-	translate(cpos.x(), cpos.y());
-	QGraphicsPolygonItem::scale(dx, dy);
-	translate(-cpos.x(), -cpos.y());
+    // translate(cpos.x(), cpos.y());
+    setTransform(QTransform::fromTranslate(cpos.x(), cpos.y()), true);
+    //QGraphicsPolygonItem::scale(dx, dy);
+    setTransform(QTransform::fromScale(dx, dy));
+    //translate(-cpos.x(), -cpos.y());
+    setTransform(QTransform::fromTranslate(-cpos.x(), -cpos.y()), true);
 	QPolygonF pa(mapToScene(polygon()));
 	foreach (NodeItem* n, m_nodes)
 	{

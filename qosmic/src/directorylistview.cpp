@@ -19,6 +19,8 @@
  ***************************************************************************/
 #include <QFileSystemModel>
 #include <QUrl>
+#include <QDrag>
+#include <QMimeData>
 
 #include "directorylistview.h"
 #include "logger.h"

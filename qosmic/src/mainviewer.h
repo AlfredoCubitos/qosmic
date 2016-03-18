@@ -44,8 +44,8 @@ class MainViewerGraphicsView : public QGraphicsView
 		MainViewerGraphicsView(QWidget* parent=0);
 
 	protected:
-		void dragEnterEvent(QDragEnterEvent*);
-		void dropEvent(QDropEvent*);
+        void dragEnterEvent(QDragEnterEvent*);
+        void dropEvent(QDropEvent*);
 };
 
 

@@ -522,7 +522,7 @@ bool MainViewer::isPresetSelected() const
 
 void MainViewer::dragEnterEvent(QDragEnterEvent* event)
 {
-	if (event->mimeData()->hasFormat("application/x-mutationpreviewwidget")
+    if (event->mimeData()->hasFormat("application/x-mutationpreviewwidget")
 	|| event->mimeData()->hasFormat("application/x-qabstractitemmodeldatalist"))
 		event->acceptProposedAction();
 }

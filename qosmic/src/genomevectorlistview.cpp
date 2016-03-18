@@ -18,6 +18,8 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 #include <QUrl>
+#include <QDrag>
+#include <QMimeData>
 
 #include "genomevectorlistview.h"
 #include "flam3filestream.h"
