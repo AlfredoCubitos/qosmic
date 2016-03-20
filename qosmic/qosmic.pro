@@ -36,9 +36,8 @@ CONFIG += install_icons install_desktop
 
 
 ################################################################################
-## Add your non-english locale here to install the translations.  Only a naive
-## set of french translations is available.
-#CONFIG += ts_fr
+## Add your non-english locale here to install the translations.
+CONFIG += install_locale
 
 
 ################################################################################
@@ -122,10 +121,10 @@ target.path += $$PREFIX/bin
 INSTALLS += target
 
 ## add the translations to the install set
-ts_fr {
-	translations.files= ts/*.qm
-	translations.path = $$TRANSDIR
-	INSTALLS += translations
+install_locale {
+	locale.files= ts/*.qm
+	locale.path = $$TRANSDIR
+	INSTALLS += locale
 }
 
 ## add icons to the install set
@@ -323,11 +322,26 @@ SOURCES += \
  src/checkersbrush.cpp
 
 
-TRANSLATIONS = ts/qosmic_fr.ts \
-               ts/qosmic_cs.ts \
-               ts/qosmic_ru.ts
+TRANSLATIONS += ts/qosmic_fr.ts \
+                ts/qosmic_cs.ts \
+                ts/qosmic_ru.ts
 
 MOC_DIR = .moc
 OBJECTS_DIR = .obj
 RCC_DIR = .res
 UI_DIR = .ui
+
+isEmpty(QMAKE_LRELEASE):QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+system($${QMAKE_LRELEASE} -silent $${_PRO_FILE_} 2> /dev/null)
+
+updateqm.input = TRANSLATIONS
+updateqm.output = ts/${QMAKE_FILE_BASE}.qm
+updateqm.commands = $$QMAKE_LRELEASE \
+    ${QMAKE_FILE_IN} \
+    -qm \
+    ${QMAKE_FILE_OUT}
+updateqm.CONFIG += no_link
+QMAKE_EXTRA_COMPILERS += updateqm
+TS_OUT = $$TRANSLATIONS
+TS_OUT ~= s/.ts/.qm/g
+PRE_TARGETDEPS += $$TS_OUT
