@@ -11,8 +11,8 @@ SHARED = $$PREFIX/share
 
 
 ################################################################################
-## The translations files are installed in $$SHARED/translations
-TRANSDIR = $$SHARED/translations
+## The translations files are installed in $$SHARED/qosmic/translations
+TRANSDIR = $$SHARED/qosmic/translations
 
 
 ################################################################################
