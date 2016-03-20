@@ -333,7 +333,8 @@ SOURCES += \
 
 
 TRANSLATIONS = ts/qosmic_fr.ts \
- ts/qosmic_cs.ts
+               ts/qosmic_cs.ts \
+               ts/qosmic_ru.ts
 
 MOC_DIR = .moc
 OBJECTS_DIR = .obj
