@@ -11,8 +11,8 @@ SHARED = $$PREFIX/share
 
 
 ################################################################################
-## The translations files are installed in $$SHARED/translations
-TRANSDIR = $$SHARED/translations
+## The translations files are installed in $$SHARED/qosmic/translations
+TRANSDIR = $$SHARED/qosmic/translations
 
 
 ################################################################################
@@ -36,43 +36,33 @@ CONFIG += install_icons install_desktop
 
 
 ################################################################################
-## Add your non-english locale here to install the translations.  Only a naive
-## set of french translations is available.
-#CONFIG += ts_fr
+## Add your non-english locale here to install the translations.
+CONFIG += install_locale
 
 
 ################################################################################
 ## Add linked libs and paths for headers and palettes here using pkg-config.
 ## If your system doesn't support pkg-config then comment out the next line and
 ## set these values below.
-#CONFIG += link_pkgconfig
+CONFIG += link_pkgconfig
 
-#link_pkgconfig {
-#	message("Config using pkg-config version "$$system(pkg-config --version))
-#	PKGCONFIG = flam3 lua
+link_pkgconfig {
+	message("Config using pkg-config version "$$system(pkg-config --version))
+	PKGCONFIG = flam3 lua
 
 	## The directory that contains flam3-palettes.xml must be set here.  If
 	## your system has pkg-config, this should find the flam3 palettes.
-#	PALETTESDIR = $$system(pkg-config --variable=datarootdir flam3)/flam3
-#}
-#else {
-#	message("Config not using pkg-config")
+	PALETTESDIR = $$system(pkg-config --variable=datarootdir flam3)/flam3
+}
+else {
+	message("Config not using pkg-config")
 	## Adjust these variables to set paths and libs without using pkg-config.
 	## The PALETTESDIR must be set to the directory containing the
 	## flam3-palettes.xml file installed by the flam3 package.
-
-	## Point to the dir containing the compiled flam3-3.0 if it's not installed
-#	FLAM3_SRC_DIR = $$system(readlink -e ../flam3-3.0)
-#	PALETTESDIR = $$FLAM3_SRC_DIR
-#	INCLUDEPATH += $$FLAM3_SRC_DIR /usr/include/libxml2
-#	LIBS += -L$$FLAM3_SRC_DIR/.libs
-#	LIBS += -L/usr/lib/libxml2 -lflam3 -lm -ljpeg -lxml2 -llua
-#}
-
-## Using self compiled version
-      PALETTESDIR = /usr/local/share/flam3
-      LIBS += -L/usr/local/lib64
-      LIBS +=  -lflam3 -lm -ljpeg -lxml2 -llua
+	PALETTESDIR = /usr/share/flam3
+	INCLUDEPATH += /usr/include/libxml2
+	LIBS += -L/usr/lib/libxml2 -lflam3 -lm -ljpeg -lxml2 -llua
+}
 
 ################################################################################
 ## Build style flags.  Adding debug enables more verbose logging.
@@ -131,10 +121,10 @@ target.path += $$PREFIX/bin
 INSTALLS += target
 
 ## add the translations to the install set
-ts_fr {
-	translations.files= ts/*.qm
-	translations.path = $$TRANSDIR
-	INSTALLS += translations
+install_locale {
+	locale.files= ts/*.qm
+	locale.path = $$TRANSDIR
+	INSTALLS += locale
 }
 
 ## add icons to the install set
@@ -332,10 +322,26 @@ SOURCES += \
  src/checkersbrush.cpp
 
 
-TRANSLATIONS = ts/qosmic_fr.ts \
- ts/qosmic_cs.ts
+TRANSLATIONS += ts/qosmic_fr.ts \
+                ts/qosmic_cs.ts \
+                ts/qosmic_ru.ts
 
 MOC_DIR = .moc
 OBJECTS_DIR = .obj
 RCC_DIR = .res
 UI_DIR = .ui
+
+isEmpty(QMAKE_LRELEASE):QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+system($${QMAKE_LRELEASE} -silent $${_PRO_FILE_} 2> /dev/null)
+
+updateqm.input = TRANSLATIONS
+updateqm.output = ts/${QMAKE_FILE_BASE}.qm
+updateqm.commands = $$QMAKE_LRELEASE \
+    ${QMAKE_FILE_IN} \
+    -qm \
+    ${QMAKE_FILE_OUT}
+updateqm.CONFIG += no_link
+QMAKE_EXTRA_COMPILERS += updateqm
+TS_OUT = $$TRANSLATIONS
+TS_OUT ~= s/.ts/.qm/g
+PRE_TARGETDEPS += $$TS_OUT
