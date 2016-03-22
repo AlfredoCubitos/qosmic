@@ -23,6 +23,7 @@
 #include <QFileDialog>
 #include <QSettings>
 #include <QGraphicsSceneMouseEvent>
+#include <QMimeData>
 
 #include "mainviewer.h"
 #include "viewerpresetsmodel.h"

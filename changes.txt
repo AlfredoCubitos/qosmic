@@ -1,3 +1,10 @@
+Version 2.0.0
+
+- Compatibility updates for flam3-3.1.1, Lua-5.2, Qt-5.5.
+- New resolution 1920x1080 added.
+- Add Russian translation.
+- Install translations.
+
 Version 1.5.0
 
 - Compatibility updates for flam3-3.0.1.

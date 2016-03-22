@@ -1,52 +1,45 @@
+Summary:	Graphical interface for creating flam3 fractal images
 Name:		qosmic
-Version:	1.5.0
-Release:	1%{?dist}
-Summary:	A cosmic recursive flame fractal editor
-
-Group:		Applications/Multimedia
+Version:	2.0.0
+Release:	%mkrel 1
 License:	GPLv2
-URL:		http://code.google.com/p/qosmic/
-Source0:	qosmic-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
-BuildRequires:	flam3-devel >= 3.0.1
-BuildRequires:	qt-devel >= 4.6
-BuildRequires:	lua-devel >= 5.1
-Requires:	flam3 >= 3.0.1
-Requires:	qt >= 4.6
-Requires:	lua >= 5.1
+Group:		Graphics/Editors and Converters
+Url:		https://github.com/AlfredoCubitos/qosmic
+Source0:	%{name}-%{version}.tar.gz
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5UiTools)
+BuildRequires:	jpeg-devel
+BuildRequires:	pkgconfig(flam3)
+BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(lua)
+BuildRequires:	qttools5
+Requires:	qttranslations5
 
 %description
-A graphical interface for creating, editing, and rendering flam3 fractal images.
+Qosmic is graphical interface for creating, editing, and rendering
+flam3 fractal images. The electricsheep screen saver has been gaining
+popularity, and Qosmic was developed to provide a Qt interface for
+people interested in creating and contributing sheep.
 
 %prep
 %setup -q
 
-
 %build
-%{_qt4_qmake}
-make %{?_smp_mflags}
-
+pushd %{name}
+%qmake_qt5
+%make
+popd
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make install INSTALL_ROOT=$RPM_BUILD_ROOT
-
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
+pushd %{name}
+%make_install INSTALL_ROOT=%{buildroot}
+popd
 
 %files
-%defattr(-,root,root,-)
-%doc README README-LUA changes.txt COPYING scripts/
-%{_bindir}/%{name}
-%{_pixmapsdir}/qosmicicon.xpm
-%{_desktopdir}/%{name}.desktop
-
-
-%changelog
-* Thu Mar 10 2011 Nathaniel Clark <utopiabound@sourceforge.net> - 1.4.8-1
-- Initial Spec file
-* Thu Jul 21 2011 David Bitseff <bitsed@gmail.com> - 1.5.0-1
-- Version 1.5.0 Spec file
+%doc %{name}/README* %{name}/changes.txt %{name}/scripts
+%{_bindir}/*
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/pixmaps/%{name}icon.xpm
+%{_datadir}/%{name}/translations/*.qm
