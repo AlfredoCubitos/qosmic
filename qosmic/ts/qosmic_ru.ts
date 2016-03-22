@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.0">
 <context>
     <name>AdjustSceneWidget</name>
     <message>
@@ -16,7 +14,7 @@
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="59"/>
         <source>set grid color</source>
-        <translation>Установить цвет сетки</translation>
+        <translation>Выбрать цвет сетки</translation>
     </message>
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="73"/>
@@ -26,7 +24,7 @@
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="86"/>
         <source>set guide color</source>
-        <translation>Установить цвет руководства</translation>
+        <translation>Выбрать цвет руководства</translation>
     </message>
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="103"/>
@@ -36,7 +34,7 @@
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="119"/>
         <source>set background color</source>
-        <translation>Установить цвет фона</translation>
+        <translation>Выбрать цвет фона</translation>
     </message>
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="133"/>
@@ -186,7 +184,8 @@
         <location filename="../ui/colorbalancewidget.ui" line="237"/>
         <source>the maximum Value for an RGB color before trending the color towards white as the density 
 increases.  -1 = disabled, 0 = no highlights</source>
-        <translation></translation>
+        <translation>Наибольшее значение для цвета RGB до направления цвета к белому по мере увеличения плотности.
+-1 = Отключено, 0 = Нет выделения цветом</translation>
     </message>
     <message>
         <location filename="../ui/colorbalancewidget.ui" line="241"/>
@@ -226,7 +225,7 @@ increases.  -1 = disabled, 0 = no highlights</source>
     <message>
         <location filename="../ui/colorbalancewidget.ui" line="338"/>
         <source>early clip</source>
-        <translation type="unfinished"></translation>
+        <translation>Предыдущий клип</translation>
     </message>
 </context>
 <context>
@@ -254,7 +253,7 @@ increases.  -1 = disabled, 0 = no highlights</source>
     <message>
         <location filename="../ui/colordialog.ui" line="210"/>
         <source>Green</source>
-        <translation>Зеленый</translation>
+        <translation>Зелёный</translation>
     </message>
     <message>
         <location filename="../ui/colordialog.ui" line="239"/>
@@ -311,12 +310,12 @@ increases.  -1 = disabled, 0 = no highlights</source>
         <source>background
  color</source>
         <translation>Фоновый
-цвет</translation>
+  цвет</translation>
     </message>
     <message>
         <location filename="../ui/colorsettingswidget.ui" line="223"/>
         <source>per iteration scaling factor on the transform color</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент масштабирования на итерацию по преобразованию цвета</translation>
     </message>
     <message>
         <location filename="../ui/colorsettingswidget.ui" line="226"/>
@@ -337,7 +336,7 @@ increases.  -1 = disabled, 0 = no highlights</source>
 <context>
     <name>CoreApp</name>
     <message>
-        <location filename="../src/qosmic.cpp" line="85"/>
+        <location filename="../src/qosmic.cpp" line="104"/>
         <source>Error: No palettes file found at:
 %1
 %2
@@ -350,10 +349,21 @@ the flam3_palettes environment variable.
 
 For example:
 flam3_palettes=/some/path-to/flam3-palettes.xml qosmic</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка: Файл палитр не найден:
+%1
+%2
+%3
+%4
+
+xml файл палитр flam3 не был найден.
+Вы можете установить этот путь, используя переменную
+окружения flam3_palettes.
+
+Например:
+flam3_palettes=/некоторый/путь_до/flam3-palettes.xml qosmic</translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="101"/>
+        <location filename="../src/qosmic.cpp" line="120"/>
         <source>Qosmic %1
 Usage: qosmic [flam3 file]
 
@@ -372,7 +382,7 @@ flam3_nthreads=%4
 flam3_palettes=%5</translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="125"/>
+        <location filename="../src/qosmic.cpp" line="144"/>
         <source>Couldn&apos;t load file %1</source>
         <translation>Не удалось загрузить файл %1</translation>
     </message>
@@ -380,14 +390,9 @@ flam3_palettes=%5</translation>
 <context>
     <name>DirectoryViewWidget</name>
     <message>
-        <location filename="../src/directoryviewwidget.cpp" line="89"/>
-        <source>Select a directory</source>
-        <translation>Выберите каталог</translation>
-    </message>
-    <message>
         <location filename="../ui/directoryviewwidget.ui" line="14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location filename="../ui/directoryviewwidget.ui" line="20"/>
@@ -401,12 +406,17 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/directoryviewwidget.ui" line="118"/>
         <source>+</source>
-        <translation></translation>
+        <translation>+</translation>
     </message>
     <message>
         <location filename="../ui/directoryviewwidget.ui" line="129"/>
         <source>-</source>
-        <translation></translation>
+        <translation>-</translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="89"/>
+        <source>Select a directory</source>
+        <translation>Выберите каталог</translation>
     </message>
 </context>
 <context>
@@ -414,7 +424,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="26"/>
         <source>EditModeSelector</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка режима редактирования</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="55"/>
@@ -484,17 +494,17 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="339"/>
         <source>%</source>
-        <translation></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="367"/>
         <source>+</source>
-        <translation></translation>
+        <translation>+</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="374"/>
         <source>-</source>
-        <translation></translation>
+        <translation>-</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="393"/>
@@ -504,7 +514,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="396"/>
         <source>horiz</source>
-        <translation>горизонт.</translation>
+        <translation>Горизонт.</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="407"/>
@@ -514,7 +524,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="410"/>
         <source>vert</source>
-        <translation>верт.</translation>
+        <translation>Верт.</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="446"/>
@@ -530,25 +540,25 @@ flam3_palettes=%5</translation>
         <location filename="../ui/editmodeselectorwidget.ui" line="466"/>
         <location filename="../ui/editmodeselectorwidget.ui" line="751"/>
         <source>origin</source>
-        <translation>начало коорд.</translation>
+        <translation>Начало коорд.</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="471"/>
         <location filename="../ui/editmodeselectorwidget.ui" line="756"/>
         <source>mark</source>
-        <translation>метка</translation>
+        <translation>Метка</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="476"/>
         <location filename="../ui/editmodeselectorwidget.ui" line="761"/>
         <source>circum</source>
-        <translation>вокруг</translation>
+        <translation>Вокруг</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="481"/>
         <location filename="../ui/editmodeselectorwidget.ui" line="766"/>
         <source>box</source>
-        <translation>ящик</translation>
+        <translation>Ящик</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="486"/>
@@ -598,12 +608,12 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="573"/>
         <source>edit the post transform</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать запись преобразования</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="576"/>
         <source>post</source>
-        <translation type="unfinished"></translation>
+        <translation>После</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="614"/>
@@ -613,7 +623,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="630"/>
         <source>selection type</source>
-        <translation type="unfinished">Тип выделения</translation>
+        <translation>Тип выделения</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="634"/>
@@ -623,7 +633,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="639"/>
         <source>nodes</source>
-        <translation>узлы</translation>
+        <translation>Узлы</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="675"/>
@@ -648,7 +658,7 @@ flam3_palettes=%5</translation>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="746"/>
         <source>scene</source>
-        <translation>сцена</translation>
+        <translation>Сцена</translation>
     </message>
 </context>
 <context>
@@ -707,10 +717,11 @@ flam3_palettes=%5</translation>
         <location filename="../src/xfedit.cpp" line="903"/>
         <source>post transform: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение преобразования: %1
+</translation>
     </message>
     <message>
-        <location filename="../src/xfedit.cpp" line="1864"/>
+        <location filename="../src/xfedit.cpp" line="1867"/>
         <source>transform: %1
 density: %L2
 </source>
@@ -719,7 +730,7 @@ density: %L2
 </translation>
     </message>
     <message>
-        <location filename="../src/xfedit.cpp" line="1867"/>
+        <location filename="../src/xfedit.cpp" line="1870"/>
         <source>final transform: %1
 density: %L2
 </source>
@@ -761,7 +772,7 @@ density: %L2
     <message>
         <location filename="../ui/genomevectorlistmodelitemeditor.ui" line="55"/>
         <source>x</source>
-        <translation></translation>
+        <translation>x</translation>
     </message>
 </context>
 <context>
@@ -813,7 +824,7 @@ density: %L2
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="119"/>
         <source>samples per pixel</source>
-        <translation>образцов на пиксель</translation>
+        <translation>Образцов на пиксель</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="122"/>
@@ -823,7 +834,7 @@ density: %L2
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="169"/>
         <source>spatial filter radius (variance of gaussian)</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиус пространственного фильтра (Гаусова дисперсия)</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="172"/>
@@ -833,7 +844,7 @@ density: %L2
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="207"/>
         <source>shape of the spatial filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма пространственного фильтра</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="210"/>
@@ -858,78 +869,116 @@ density: %L2
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="242"/>
         <source>triangle</source>
-        <translation>треугольник</translation>
+        <translation>Треугольник</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="247"/>
         <source>bell</source>
-        <translation type="unfinished"></translation>
+        <translation>Звонок</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="252"/>
         <source>bspline</source>
-        <translation type="unfinished"></translation>
+        <translation>B-образная кривая</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="257"/>
         <source>mitchell</source>
-        <translation type="unfinished"></translation>
+        <translation>Митчелл</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="262"/>
         <source>blackman</source>
-        <translation type="unfinished"></translation>
+        <translation>Блэкмэн</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="267"/>
         <source>catrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Катром</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="272"/>
         <source>hanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Ханнинг</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="277"/>
         <source>hamming</source>
-        <translation type="unfinished"></translation>
+        <translation>Хамминг</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="282"/>
         <source>lanczos3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ланкзос3</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="287"/>
         <source>lanczos2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ланкзос2</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="292"/>
         <source>quadratic</source>
-        <translation type="unfinished"></translation>
+        <translation>Квадратный</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="312"/>
+        <source>density estimation parameters for blurring low density hits</source>
+        <translation>Параметры для оценки плотности размывания низкой плотности</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="315"/>
+        <source>estimator</source>
+        <translation>Оценщик</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="328"/>
+        <source>filter width for bin with one hit</source>
+        <translation>Ширина фильтра для бункера с одним выводом</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="353"/>
+        <source>exponent on decay function</source>
+        <translation>Функция затухания по экспоненте</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="356"/>
+        <source>estimator curve</source>
+        <translation>Оценка кривой</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="397"/>
+        <source>minimum filter width used.  forces filter
+ to be used of at least this width on all pts</source>
+        <translation>Мин. ипользуемый диапазон фильтра. Причём диапазон фильтра
+д.б. не меньше диапазона разброса всех пунктов.</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="401"/>
+        <source>estimator min</source>
+        <translation>Оценщик по мин.</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="436"/>
         <source>spatial oversample</source>
-        <translation type="unfinished"></translation>
+        <translation>Пространственная передискретизация</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="439"/>
         <source>oversample</source>
-        <translation type="unfinished"></translation>
+        <translation>Передискретизация</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="474"/>
         <source>sample density iterations. number of times
  the buckets are filtered into the accumulator</source>
-        <translation type="unfinished"></translation>
+        <translation>Итерации плотности образца.
+Сколько раз поршни отфильтрованы в накопитель</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="478"/>
         <source>passes</source>
-        <translation type="unfinished"></translation>
+        <translation>Проходы</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="516"/>
@@ -944,53 +993,12 @@ density: %L2
 0 means pick a random symmetry (maybe none)
 -1 means bilateral (reflection)
 -2 or less means rotational and reflective</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="652"/>
-        <source>&lt;</source>
-        <translation>&lt;</translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="669"/>
-        <source>&gt;</source>
-        <translation>&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="312"/>
-        <source>density estimation parameters for blurring low density hits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="315"/>
-        <source>estimator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="328"/>
-        <source>filter width for bin with one hit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="353"/>
-        <source>exponent on decay function</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="356"/>
-        <source>estimator curve</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="397"/>
-        <source>minimum filter width used.  forces filter
- to be used of at least this width on all pts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/imgsettingswidget.ui" line="401"/>
-        <source>estimator min</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа генома симметрии
+2 или более означает вращательное
+1 означает идентичность, то есть никакой симметрии
+0 означает случайный выбор симметрии (может не быть ни одного)
+-1 означает одностороннее (отражение)
+-2 или менее означает вращательное и отражательное</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="545"/>
@@ -1006,6 +1014,16 @@ density: %L2
         <location filename="../ui/imgsettingswidget.ui" line="588"/>
         <source>...</source>
         <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="652"/>
+        <source>&lt;</source>
+        <translation>&lt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/imgsettingswidget.ui" line="669"/>
+        <source>&gt;</source>
+        <translation>&gt;</translation>
     </message>
 </context>
 <context>
@@ -1081,7 +1099,7 @@ density: %L2
     <message>
         <location filename="../src/lua/luathread.cpp" line="64"/>
         <source>stopping$</source>
-        <translation>остановка$</translation>
+        <translation>Остановка$</translation>
     </message>
     <message>
         <location filename="../src/lua/luathread.cpp" line="66"/>
@@ -1091,16 +1109,21 @@ density: %L2
     <message>
         <location filename="../src/lua/luathread.cpp" line="77"/>
         <source>ok</source>
-        <translation></translation>
+        <translation>ОК</translation>
     </message>
     <message>
-        <location filename="../src/lua/luathread.cpp" line="520"/>
+        <location filename="../src/lua/luathread.cpp" line="522"/>
         <source>Running ........</source>
         <translation>Запуск ........</translation>
     </message>
 </context>
 <context>
     <name>MainPreviewWidget</name>
+    <message>
+        <location filename="../ui/mainpreviewwidget.ui" line="14"/>
+        <source>Preview</source>
+        <translation>Предпросмотр</translation>
+    </message>
     <message>
         <location filename="../src/mainpreviewwidget.cpp" line="33"/>
         <source>presets</source>
@@ -1111,603 +1134,81 @@ density: %L2
         <source>genome quality</source>
         <translation>Качество генома</translation>
     </message>
-    <message>
-        <location filename="../ui/mainpreviewwidget.ui" line="14"/>
-        <source>Preview</source>
-        <translation>Предпросмотр</translation>
-    </message>
 </context>
 <context>
     <name>MainViewer</name>
     <message>
-        <location filename="../src/mainviewer.cpp" line="58"/>
+        <location filename="../ui/mainviewer.ui" line="17"/>
+        <source>flame viewer</source>
+        <translation>Просмотр пламени</translation>
+    </message>
+    <message>
+        <location filename="../src/mainviewer.cpp" line="51"/>
+        <source>fullscreen</source>
+        <translation>Полный экран</translation>
+    </message>
+    <message>
+        <location filename="../src/mainviewer.cpp" line="63"/>
         <source>presets</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="62"/>
+        <location filename="../src/mainviewer.cpp" line="69"/>
         <source>show status</source>
         <translation>Показать статус</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="65"/>
+        <location filename="../src/mainviewer.cpp" line="74"/>
         <source>genome quality</source>
         <translation>Качество генома</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="70"/>
+        <location filename="../src/mainviewer.cpp" line="79"/>
         <source>file</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="71"/>
+        <location filename="../src/mainviewer.cpp" line="80"/>
         <source>close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="76"/>
+        <location filename="../src/mainviewer.cpp" line="85"/>
         <source>scale down</source>
         <translation>Опустить шкалу</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="81"/>
+        <location filename="../src/mainviewer.cpp" line="90"/>
         <source>scale up</source>
         <translation>Поднять шкалу</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="86"/>
+        <location filename="../src/mainviewer.cpp" line="95"/>
         <source>scale last</source>
         <translation>Последняя шкала</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="91"/>
+        <location filename="../src/mainviewer.cpp" line="100"/>
         <source>scale reset</source>
         <translation>Сбросить шкалу</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="96"/>
+        <location filename="../src/mainviewer.cpp" line="105"/>
         <source>save image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="../src/mainviewer.cpp" line="209"/>
+        <location filename="../src/mainviewer.cpp" line="223"/>
         <source>Save an image</source>
         <translation>Сохранить изображение</translation>
-    </message>
-    <message>
-        <location filename="../ui/mainviewer.ui" line="17"/>
-        <source>flame viewer</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/mainwindow.cpp" line="47"/>
-        <source>preview</source>
-        <translation>Предпросмотр</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="51"/>
-        <source>viewer</source>
-        <translation>Просмотр</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="55"/>
-        <source>file.png</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="98"/>
-        <source>Preview</source>
-        <translation>Предпросмотр</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="113"/>
-        <location filename="../src/mainwindow.cpp" line="1035"/>
-        <source>Triangles</source>
-        <translation>Треугольники</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="130"/>
-        <source>Densities</source>
-        <translation>Плотности</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="155"/>
-        <location filename="../src/mainwindow.cpp" line="1025"/>
-        <source>Viewer</source>
-        <translation>Просмотр</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="168"/>
-        <source>Image</source>
-        <translation>Изображение</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="184"/>
-        <location filename="../src/mainwindow.cpp" line="1055"/>
-        <source>Camera</source>
-        <translation>Камера</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="200"/>
-        <source>Coordinates</source>
-        <translation>Координаты</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="219"/>
-        <source>Colors</source>
-        <translation>Цвета</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="239"/>
-        <source>Color Balance</source>
-        <translation>Цветовой баланс</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="254"/>
-        <source>Variations</source>
-        <translation>Вариации</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="334"/>
-        <source>Browse</source>
-        <translation>Браузер</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="305"/>
-        <location filename="../src/mainwindow.cpp" line="1065"/>
-        <source>Palettes</source>
-        <translation>Палитры</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="320"/>
-        <location filename="../src/mainwindow.cpp" line="1070"/>
-        <source>Mutations</source>
-        <translation>Мутации</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="368"/>
-        <source>Edit Script</source>
-        <translation>Правка сценария</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="290"/>
-        <source>Genomes</source>
-        <translation>Геномы</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="272"/>
-        <location filename="../src/mainwindow.cpp" line="1085"/>
-        <source>Chaos</source>
-        <translation>Хаос</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="350"/>
-        <source>Sheep Loops</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="562"/>
-        <source>Open a flame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="563"/>
-        <location filename="../src/mainwindow.cpp" line="592"/>
-        <location filename="../src/mainwindow.cpp" line="741"/>
-        <location filename="../src/mainwindow.cpp" line="761"/>
-        <location filename="../src/mainwindow.cpp" line="1704"/>
-        <source>flam3 xml (*.flam *.flam3 *.flame);;All files (*)</source>
-        <translation>flam3 xml (*.flam *.flam3 *.flame);;Все файлы (*)</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="591"/>
-        <source>Save a flame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="694"/>
-        <location filename="../src/mainwindow.cpp" line="1234"/>
-        <location filename="../src/mainwindow.cpp" line="1253"/>
-        <source>Application error</source>
-        <translation>Ошибка приложения</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="695"/>
-        <source>Cannot write file %1
-</source>
-        <translation>Не удалось записать файл %1
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="740"/>
-        <source>Import genomes from a file</source>
-        <translation>Импортировать геномы из файла</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
-        <location filename="../src/mainwindow.cpp" line="770"/>
-        <source>Error</source>
-        <translation>Ошибка</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="749"/>
-        <source>Cannot import file %1</source>
-        <translation>Не удалось импортировать файл %1</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="760"/>
-        <source>Save the current genome</source>
-        <translation>Сохранить текущий геном</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="771"/>
-        <source>Cannot write file to %1</source>
-        <translation>Не удалось записать файл в %1</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="788"/>
-        <source>About Qosmic</source>
-        <translation>О Qosmic</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="797"/>
-        <source>Reset</source>
-        <translation>Сбросить</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="799"/>
-        <source>Load default genome</source>
-        <translation>Загрузить типовой геном</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="802"/>
-        <source>&amp;Open...</source>
-        <translation>&amp;Открыть...</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="804"/>
-        <source>Open an existing file</source>
-        <translation>Открыть существующий файл</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="807"/>
-        <source>&amp;Save</source>
-        <translation>&amp;Сохранить</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="809"/>
-        <source>Save the flame to disk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="812"/>
-        <source>Save &amp;As...</source>
-        <translation>Сохранить &amp;как...</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="814"/>
-        <source>Save the flame under a new name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="817"/>
-        <source>Render to &amp;file...</source>
-        <translation>&amp;Визуализовать в файл...</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="819"/>
-        <source>Save an image of current flame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="822"/>
-        <source>Q&amp;uicksave flame...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="824"/>
-        <source>Quickly save file and image of current flame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
-        <source>&amp;Quit</source>
-        <translation>В&amp;ыход</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="836"/>
-        <source>Quit the application</source>
-        <translation>Завершить работу с приложением</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="839"/>
-        <source>&amp;Stop rendering</source>
-        <translation>&amp;Остановить рендеринг</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="841"/>
-        <source>Stop rendering</source>
-        <translation>Остановить рендеринг</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="844"/>
-        <source>&amp;Random Flame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="846"/>
-        <source>Generate a random xform set</source>
-        <translation>Генерировать случайный набор xform</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="851"/>
-        <source>Rescale the editor</source>
-        <translation>Перемасштабировать редактор</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="854"/>
-        <source>Select next triangle</source>
-        <translation>Выбрать следующий треугольник</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="859"/>
-        <source>Select previous triangle</source>
-        <translation>Выбрать предыдущий треугольник</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="864"/>
-        <source>Scale in the scene</source>
-        <translation>Шкала в сцене</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="871"/>
-        <source>Scale out the scene</source>
-        <translation>Шкала за сценой</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="878"/>
-        <location filename="../src/mainwindow.cpp" line="882"/>
-        <source>Undo</source>
-        <translation>Отменить</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="886"/>
-        <location filename="../src/mainwindow.cpp" line="890"/>
-        <source>Redo</source>
-        <translation>Вернуть</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="894"/>
-        <location filename="../src/mainwindow.cpp" line="896"/>
-        <source>Cut</source>
-        <translation>Вырезать</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="900"/>
-        <location filename="../src/mainwindow.cpp" line="902"/>
-        <source>Copy</source>
-        <translation>Копировать</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="906"/>
-        <location filename="../src/mainwindow.cpp" line="908"/>
-        <source>Paste</source>
-        <translation>Вставить</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="912"/>
-        <location filename="../src/mainwindow.cpp" line="913"/>
-        <source>Import genomes</source>
-        <translation>Импортировать геномы</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="917"/>
-        <source>Export current genome</source>
-        <translation>Экспортировать текущий геном</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="918"/>
-        <source>Export the current genome</source>
-        <translation>Экспортировать текущий геном</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1004"/>
-        <source>File</source>
-        <translation>Файл</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1006"/>
-        <source>Show &amp;File Toolbar</source>
-        <translation>Показать панель &amp;файлов</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1007"/>
-        <source>Show the file toolbar</source>
-        <translation>Показать панель файлов</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1235"/>
-        <source>Couldn&apos;t open file %1
-</source>
-        <translation>Не удалось открыть файл %1
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1254"/>
-        <source>Couldn&apos;t save file %1
-</source>
-        <translation>Не удалось сохранить файл %1
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1618"/>
-        <source>undo %1/%2</source>
-        <translation>Отмена %1/%2</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1703"/>
-        <source>Save a sheep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="997"/>
-        <source>Widgets</source>
-        <translation>Виджеты</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="849"/>
-        <source>Rescale View</source>
-        <translation>Перемасштабировать просмотр</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="999"/>
-        <source>Show &amp;Widgets Toolbar</source>
-        <translation>Показать панель &amp;виджетов</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1000"/>
-        <source>Show the widgets toolbar</source>
-        <translation>Показать панель виджетов</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1010"/>
-        <source>Edit</source>
-        <translation>Правка</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1012"/>
-        <source>Show &amp;Edit Toolbar</source>
-        <translation>Показать панель &amp;правки</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="922"/>
-        <source>&amp;About</source>
-        <translation>&amp;О программе</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="923"/>
-        <source>Show the application&apos;s About box</source>
-        <translation>Показать диалог с информацией о программе</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="926"/>
-        <source>About &amp;Qt</source>
-        <translation>О &amp;Qt</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="927"/>
-        <source>Show the Qt library&apos;s About box</source>
-        <translation>Показать диалог с информацией о библиотеке Qt</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="935"/>
-        <source>&amp;File</source>
-        <translation>&amp;Файл</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="948"/>
-        <source>&amp;Edit</source>
-        <translation>&amp;Правка</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="963"/>
-        <source>&amp;Widgets</source>
-        <translation>&amp;Виджеты</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="969"/>
-        <source>&amp;Info</source>
-        <translation>&amp;Справка</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1013"/>
-        <source>Show scene editing toolbar</source>
-        <translation>Показать панель правки сцены</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1050"/>
-        <source>Image Quality</source>
-        <translation>Качество изображения</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1030"/>
-        <source>Previewer</source>
-        <translation>Предпросмотрщик</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1040"/>
-        <source>Triangle Variations</source>
-        <translation>Вариации треугольника</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1045"/>
-        <source>Triangle Color</source>
-        <translation>Цвет треугольника</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1060"/>
-        <source>Color Settings</source>
-        <translation>Настройки цвета</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1075"/>
-        <source>Genome List</source>
-        <translation>Список геномов</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1080"/>
-        <source>Triangle Densities</source>
-        <translation>Плотность треугольника</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1090"/>
-        <source>Directory Browser</source>
-        <translation>Просмотр директории</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1095"/>
-        <source>Triangle Coordinates</source>
-        <translation>Координаты треугольника</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1100"/>
-        <source>Sheep Loop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1105"/>
-        <source>Script Editor</source>
-        <translation>Редактор сценария</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
-        <location filename="../src/mainwindow.cpp" line="1286"/>
-        <location filename="../src/mainwindow.cpp" line="1716"/>
-        <source>File saved</source>
-        <translation>Файл сохранен</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1621"/>
-        <source>last undo</source>
-        <translation>Последнее отмененное</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1632"/>
-        <source>redo %1/%2</source>
-        <translation>Повтор %1/%2</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1635"/>
-        <source>last redo</source>
-        <translation>Последнее повторенное</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="15"/>
         <source>Qosmic</source>
-        <translation></translation>
+        <translation>Qosmic</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="76"/>
@@ -1735,6 +1236,528 @@ density: %L2
         <location filename="../ui/mainwindow.ui" line="118"/>
         <source>Flip Triangles</source>
         <translation>Повернуть треугольники</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="47"/>
+        <source>preview</source>
+        <translation>Предпросмотр</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="51"/>
+        <source>viewer</source>
+        <translation>Просмотр</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="55"/>
+        <source>file.png</source>
+        <translation>file.png</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="98"/>
+        <source>Preview</source>
+        <translation>Предпросмотр</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="113"/>
+        <location filename="../src/mainwindow.cpp" line="1036"/>
+        <source>Triangles</source>
+        <translation>Треугольники</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="130"/>
+        <source>Densities</source>
+        <translation>Плотности</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="155"/>
+        <location filename="../src/mainwindow.cpp" line="1026"/>
+        <source>Viewer</source>
+        <translation>Просмотр</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="168"/>
+        <source>Image</source>
+        <translation>Изображение</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="184"/>
+        <location filename="../src/mainwindow.cpp" line="1056"/>
+        <source>Camera</source>
+        <translation>Камера</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="200"/>
+        <source>Coordinates</source>
+        <translation>Координаты</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="219"/>
+        <source>Colors</source>
+        <translation>Цвета</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="239"/>
+        <source>Color Balance</source>
+        <translation>Цветовой баланс</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="254"/>
+        <source>Variations</source>
+        <translation>Вариации</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="272"/>
+        <location filename="../src/mainwindow.cpp" line="1086"/>
+        <source>Chaos</source>
+        <translation>Хаос</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="290"/>
+        <source>Genomes</source>
+        <translation>Геномы</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="305"/>
+        <location filename="../src/mainwindow.cpp" line="1066"/>
+        <source>Palettes</source>
+        <translation>Палитры</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="320"/>
+        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <source>Mutations</source>
+        <translation>Мутации</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="334"/>
+        <source>Browse</source>
+        <translation>Обзор</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="350"/>
+        <source>Sheep Loops</source>
+        <translation>Овечьи петли</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="368"/>
+        <source>Edit Script</source>
+        <translation>Правка сценария</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="563"/>
+        <source>Open a flame</source>
+        <translation>Открыть пламя</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="564"/>
+        <location filename="../src/mainwindow.cpp" line="593"/>
+        <location filename="../src/mainwindow.cpp" line="742"/>
+        <location filename="../src/mainwindow.cpp" line="762"/>
+        <location filename="../src/mainwindow.cpp" line="1708"/>
+        <source>flam3 xml (*.flam *.flam3 *.flame);;All files (*)</source>
+        <translation>flam3 xml (*.flam *.flam3 *.flame);;Все файлы (*)</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="592"/>
+        <source>Save a flame</source>
+        <translation>Сохранить пламя</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="695"/>
+        <location filename="../src/mainwindow.cpp" line="1235"/>
+        <location filename="../src/mainwindow.cpp" line="1254"/>
+        <source>Application error</source>
+        <translation>Ошибка приложения</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="696"/>
+        <source>Cannot write file %1
+</source>
+        <translation>Не удалось записать файл %1
+</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="741"/>
+        <source>Import genomes from a file</source>
+        <translation>Импортировать геномы из файла</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="749"/>
+        <location filename="../src/mainwindow.cpp" line="771"/>
+        <source>Error</source>
+        <translation>Ошибка</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="750"/>
+        <source>Cannot import file %1</source>
+        <translation>Не удалось импортировать файл %1</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="761"/>
+        <source>Save the current genome</source>
+        <translation>Сохранить текущий геном</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="772"/>
+        <source>Cannot write file to %1</source>
+        <translation>Не удалось записать файл в %1</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="789"/>
+        <source>About Qosmic</source>
+        <translation>О Qosmic</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="798"/>
+        <source>Reset</source>
+        <translation>Сбросить</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="800"/>
+        <source>Load default genome</source>
+        <translation>Загрузить типовой геном</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="803"/>
+        <source>&amp;Open...</source>
+        <translation>&amp;Открыть...</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="805"/>
+        <source>Open an existing file</source>
+        <translation>Открыть существующий файл</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="808"/>
+        <source>&amp;Save</source>
+        <translation>&amp;Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="810"/>
+        <source>Save the flame to disk</source>
+        <translation>Сохранить пламя на диск</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="813"/>
+        <source>Save &amp;As...</source>
+        <translation>Сохранить &amp;как...</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="815"/>
+        <source>Save the flame under a new name</source>
+        <translation>Сохранить пламя под новым именем</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="818"/>
+        <source>Render to &amp;file...</source>
+        <translation>&amp;Визуализовать в файл...</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="820"/>
+        <source>Save an image of current flame</source>
+        <translation>Сохранить текущее изображение пламени</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="823"/>
+        <source>Q&amp;uicksave flame...</source>
+        <translation>&amp;Быстрое сохранение пламени...</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="825"/>
+        <source>Quickly save file and image of current flame</source>
+        <translation>Быстро сохранить файл и  текущее изображение пламени</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="835"/>
+        <source>&amp;Quit</source>
+        <translation>В&amp;ыход</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="837"/>
+        <source>Quit the application</source>
+        <translation>Завершить работу с приложением</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="840"/>
+        <source>&amp;Stop rendering</source>
+        <translation>&amp;Остановить рендеринг</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="842"/>
+        <source>Stop rendering</source>
+        <translation>Остановить рендеринг</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="845"/>
+        <source>&amp;Random Flame</source>
+        <translation>&amp;Случайность пламени</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="847"/>
+        <source>Generate a random xform set</source>
+        <translation>Генерировать случайный набор xform</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="850"/>
+        <source>Rescale View</source>
+        <translation>Перемасштабировать просмотр</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="852"/>
+        <source>Rescale the editor</source>
+        <translation>Перемасштабировать редактор</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="855"/>
+        <source>Select next triangle</source>
+        <translation>Выбрать следующий треугольник</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="860"/>
+        <source>Select previous triangle</source>
+        <translation>Выбрать предыдущий треугольник</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="865"/>
+        <source>Scale in the scene</source>
+        <translation>Шкала в сцене</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="872"/>
+        <source>Scale out the scene</source>
+        <translation>Шкала за сценой</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="879"/>
+        <location filename="../src/mainwindow.cpp" line="883"/>
+        <source>Undo</source>
+        <translation>Отменить</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="887"/>
+        <location filename="../src/mainwindow.cpp" line="891"/>
+        <source>Redo</source>
+        <translation>Вернуть</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="895"/>
+        <location filename="../src/mainwindow.cpp" line="897"/>
+        <source>Cut</source>
+        <translation>Вырезать</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="901"/>
+        <location filename="../src/mainwindow.cpp" line="903"/>
+        <source>Copy</source>
+        <translation>Копировать</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="907"/>
+        <location filename="../src/mainwindow.cpp" line="909"/>
+        <source>Paste</source>
+        <translation>Вставить</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="913"/>
+        <location filename="../src/mainwindow.cpp" line="914"/>
+        <source>Import genomes</source>
+        <translation>Импортировать геномы</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="918"/>
+        <source>Export current genome</source>
+        <translation>Экспортировать текущий геном</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="919"/>
+        <source>Export the current genome</source>
+        <translation>Экспортировать текущий геном</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="923"/>
+        <source>&amp;About</source>
+        <translation>&amp;О программе</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="924"/>
+        <source>Show the application&apos;s About box</source>
+        <translation>Показать диалог с информацией о программе</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="927"/>
+        <source>About &amp;Qt</source>
+        <translation>О &amp;Qt</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="928"/>
+        <source>Show the Qt library&apos;s About box</source>
+        <translation>Показать диалог с информацией о библиотеке Qt</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="936"/>
+        <source>&amp;File</source>
+        <translation>&amp;Файл</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="949"/>
+        <source>&amp;Edit</source>
+        <translation>&amp;Правка</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="964"/>
+        <source>&amp;Widgets</source>
+        <translation>&amp;Виджеты</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="970"/>
+        <source>&amp;Info</source>
+        <translation>&amp;Справка</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="998"/>
+        <source>Widgets</source>
+        <translation>Виджеты</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1000"/>
+        <source>Show &amp;Widgets Toolbar</source>
+        <translation>Показать панель &amp;виджетов</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1001"/>
+        <source>Show the widgets toolbar</source>
+        <translation>Показать панель виджетов</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1005"/>
+        <source>File</source>
+        <translation>Файл</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1007"/>
+        <source>Show &amp;File Toolbar</source>
+        <translation>Показать панель &amp;файлов</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1008"/>
+        <source>Show the file toolbar</source>
+        <translation>Показать панель файлов</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1011"/>
+        <source>Edit</source>
+        <translation>Правка</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1013"/>
+        <source>Show &amp;Edit Toolbar</source>
+        <translation>Показать панель &amp;правки</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1014"/>
+        <source>Show scene editing toolbar</source>
+        <translation>Показать панель правки сцены</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1031"/>
+        <source>Previewer</source>
+        <translation>Предпросмотрщик</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1041"/>
+        <source>Triangle Variations</source>
+        <translation>Вариации треугольника</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1046"/>
+        <source>Triangle Color</source>
+        <translation>Цвет треугольника</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1051"/>
+        <source>Image Quality</source>
+        <translation>Качество изображения</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1061"/>
+        <source>Color Settings</source>
+        <translation>Настройки цвета</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1076"/>
+        <source>Genome List</source>
+        <translation>Список геномов</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1081"/>
+        <source>Triangle Densities</source>
+        <translation>Плотность треугольника</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1091"/>
+        <source>Directory Browser</source>
+        <translation>Просмотр директории</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1096"/>
+        <source>Triangle Coordinates</source>
+        <translation>Координаты треугольника</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1101"/>
+        <source>Sheep Loop</source>
+        <translation>Овечья петля</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1106"/>
+        <source>Script Editor</source>
+        <translation>Редактор сценария</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1236"/>
+        <source>Couldn't open file %1
+</source>
+        <translation>Не удалось открыть файл %1
+</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1249"/>
+        <location filename="../src/mainwindow.cpp" line="1287"/>
+        <location filename="../src/mainwindow.cpp" line="1720"/>
+        <source>File saved</source>
+        <translation>Файл сохранён</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1255"/>
+        <source>Couldn't save file %1
+</source>
+        <translation>Не удалось сохранить файл %1
+</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1622"/>
+        <source>undo %1/%2</source>
+        <translation>Отмена %1/%2</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1625"/>
+        <source>last undo</source>
+        <translation>Последнее отменённое</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1636"/>
+        <source>redo %1/%2</source>
+        <translation>Повтор %1/%2</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1639"/>
+        <source>last redo</source>
+        <translation>Последнее повторенное</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1707"/>
+        <source>Save a sheep</source>
+        <translation>Сохранить овцу</translation>
     </message>
 </context>
 <context>
@@ -1820,6 +1843,76 @@ density: %L2
 <context>
     <name>PaletteEditor</name>
     <message>
+        <location filename="../ui/paletteeditor.ui" line="14"/>
+        <location filename="../ui/paletteeditor.ui" line="100"/>
+        <source>Palettes</source>
+        <translation>Палитры</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="126"/>
+        <source>Browse</source>
+        <translation>Обзор</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="137"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="170"/>
+        <source>Edit</source>
+        <translation>Правка</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="178"/>
+        <source>rotate</source>
+        <translation>Вращение</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="211"/>
+        <source>pad</source>
+        <translation>Панель</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="218"/>
+        <source>repeat</source>
+        <translation>Повторить</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="225"/>
+        <source>reflect</source>
+        <translation>Отразить</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="311"/>
+        <source>number of randomly generated stops,
+&lt; 2 implies random number on [2,128]</source>
+        <translation>Число случайно сгенерированных остановок,
+&lt; 2 влечёт случайное число из [2,128]</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="325"/>
+        <source>random gradient</source>
+        <translation>Случайный градиент</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="328"/>
+        <source>new</source>
+        <translation>Новый</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="348"/>
+        <location filename="../ui/paletteeditor.ui" line="351"/>
+        <source>reset</source>
+        <translation>Сбросить</translation>
+    </message>
+    <message>
+        <location filename="../ui/paletteeditor.ui" line="358"/>
+        <location filename="../ui/paletteeditor.ui" line="361"/>
+        <source>save</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
         <location filename="../src/paletteeditor.cpp" line="119"/>
         <source>Save gradient to a cpt file</source>
         <translation>Сохранить градиент в cpt файл</translation>
@@ -1865,100 +1958,9 @@ density: %L2
         <source>The gradient path %1 doesn&apos;t exist.</source>
         <translation>Путь градиента %1 не существует.</translation>
     </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="14"/>
-        <location filename="../ui/paletteeditor.ui" line="100"/>
-        <source>Palettes</source>
-        <translation>Палитры</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="170"/>
-        <source>Edit</source>
-        <translation>Правка</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="178"/>
-        <source>rotate</source>
-        <translation>Вращение</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="211"/>
-        <source>pad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="218"/>
-        <source>repeat</source>
-        <translation>Повторить</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="225"/>
-        <source>reflect</source>
-        <translation>Отразить</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="311"/>
-        <source>number of randomly generated stops,
-&lt; 2 implies random number on [2,128]</source>
-        <translation>Число случайно сгенерированных остановок,
-&lt; 2 влечет случайное число из [2,128]</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="325"/>
-        <source>random gradient</source>
-        <translation>Случайный градиент</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="328"/>
-        <source>new</source>
-        <translation>Новый</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="348"/>
-        <location filename="../ui/paletteeditor.ui" line="351"/>
-        <source>reset</source>
-        <translation>Сбросить</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="358"/>
-        <location filename="../ui/paletteeditor.ui" line="361"/>
-        <source>save</source>
-        <translation>Сохранить</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="126"/>
-        <source>Browse</source>
-        <translation>Браузер</translation>
-    </message>
-    <message>
-        <location filename="../ui/paletteeditor.ui" line="137"/>
-        <source>...</source>
-        <translation>...</translation>
-    </message>
 </context>
 <context>
     <name>RenderDialog</name>
-    <message>
-        <location filename="../src/renderdialog.cpp" line="38"/>
-        <location filename="../src/renderdialog.cpp" line="157"/>
-        <source>current settings</source>
-        <translation>Текущие настройки</translation>
-    </message>
-    <message>
-        <location filename="../src/renderdialog.cpp" line="96"/>
-        <source>File already exists</source>
-        <translation>Файл уже существует</translation>
-    </message>
-    <message>
-        <location filename="../src/renderdialog.cpp" line="97"/>
-        <source>Do you want to overwrite %1?</source>
-        <translation>Вы хотите перезаписать %1?</translation>
-    </message>
-    <message>
-        <location filename="../src/renderdialog.cpp" line="138"/>
-        <source>Save an image as ...</source>
-        <translation>Сохранить изображение как ...</translation>
-    </message>
     <message>
         <location filename="../ui/renderdialog.ui" line="26"/>
         <source>Render an image</source>
@@ -1985,6 +1987,27 @@ density: %L2
         <location filename="../ui/renderdialog.ui" line="81"/>
         <source>Quality</source>
         <translation>Качество</translation>
+    </message>
+    <message>
+        <location filename="../src/renderdialog.cpp" line="38"/>
+        <location filename="../src/renderdialog.cpp" line="157"/>
+        <source>current settings</source>
+        <translation>Текущие настройки</translation>
+    </message>
+    <message>
+        <location filename="../src/renderdialog.cpp" line="96"/>
+        <source>File already exists</source>
+        <translation>Файл уже существует</translation>
+    </message>
+    <message>
+        <location filename="../src/renderdialog.cpp" line="97"/>
+        <source>Do you want to overwrite %1?</source>
+        <translation>Вы хотите перезаписать %1?</translation>
+    </message>
+    <message>
+        <location filename="../src/renderdialog.cpp" line="138"/>
+        <source>Save an image as ...</source>
+        <translation>Сохранить изображение как ...</translation>
     </message>
 </context>
 <context>
@@ -2019,44 +2042,44 @@ density: %L2
 <context>
     <name>RenderStatus</name>
     <message>
-        <location filename="../src/renderthread.cpp" line="538"/>
+        <location filename="../src/renderthread.cpp" line="539"/>
         <source>hh:mm:ss</source>
         <translation>ч:мин:сек</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="540"/>
-        <location filename="../src/renderthread.cpp" line="557"/>
+        <location filename="../src/renderthread.cpp" line="541"/>
+        <location filename="../src/renderthread.cpp" line="558"/>
         <source>mm:ss</source>
         <translation>мин:сек</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="542"/>
-        <location filename="../src/renderthread.cpp" line="560"/>
+        <location filename="../src/renderthread.cpp" line="543"/>
+        <location filename="../src/renderthread.cpp" line="561"/>
         <source>ss.z</source>
         <translation>сек.мс</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="544"/>
+        <location filename="../src/renderthread.cpp" line="545"/>
         <source>rendering... %L1% ( %2 remaining )</source>
         <translation>Визуализация... %L1% ( %2 осталось )</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="549"/>
+        <location filename="../src/renderthread.cpp" line="550"/>
         <source>%1 rendering stopped</source>
         <translation>%1 визуализация остановлена</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="555"/>
+        <location filename="../src/renderthread.cpp" line="556"/>
         <source>hh:mm:ss.z</source>
         <translation>ч:мин:сек.мс</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="562"/>
+        <location filename="../src/renderthread.cpp" line="563"/>
         <source>%1 rendered in %2 seconds</source>
         <translation>%1 визуализировано за %2 сек</translation>
     </message>
     <message>
-        <location filename="../src/renderthread.cpp" line="567"/>
+        <location filename="../src/renderthread.cpp" line="568"/>
         <source>%1 rendered in %2</source>
         <translation>%1 визуализировано за %2</translation>
     </message>
@@ -2076,12 +2099,12 @@ density: %L2
     <message>
         <location filename="../ui/scripteditconfigdialog.ui" line="67"/>
         <source>Lua</source>
-        <translation></translation>
+        <translation>Lua</translation>
     </message>
     <message>
         <location filename="../ui/scripteditconfigdialog.ui" line="73"/>
         <source>Lua Search Paths</source>
-        <translation>Поти поиска Lua</translation>
+        <translation>Пути поиска Lua</translation>
     </message>
 </context>
 <context>
@@ -2097,8 +2120,18 @@ density: %L2
         <translation>Открыть</translation>
     </message>
     <message>
+        <location filename="../ui/scripteditwidget.ui" line="107"/>
+        <source>open</source>
+        <translation>Открыть</translation>
+    </message>
+    <message>
         <location filename="../ui/scripteditwidget.ui" line="124"/>
         <source>Save</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../ui/scripteditwidget.ui" line="127"/>
+        <source>save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
@@ -2124,12 +2157,7 @@ density: %L2
     <message>
         <location filename="../ui/scripteditwidget.ui" line="174"/>
         <source>Ctrl+Return</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/scripteditwidget.ui" line="107"/>
-        <source>open</source>
-        <translation>Открыть</translation>
+        <translation>Ctrl+Return</translation>
     </message>
     <message>
         <location filename="../ui/scripteditwidget.ui" line="194"/>
@@ -2140,11 +2168,6 @@ density: %L2
         <location filename="../ui/scripteditwidget.ui" line="197"/>
         <source>...</source>
         <translation>...</translation>
-    </message>
-    <message>
-        <location filename="../ui/scripteditwidget.ui" line="127"/>
-        <source>save</source>
-        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../src/scripteditwidget.cpp" line="59"/>
@@ -2243,6 +2266,14 @@ density: %L2
         <translation>Дублировать геном</translation>
     </message>
     <message>
+        <location filename="../ui/selectgenomewidget.ui" line="74"/>
+        <location filename="../ui/selectgenomewidget.ui" line="106"/>
+        <location filename="../ui/selectgenomewidget.ui" line="138"/>
+        <location filename="../ui/selectgenomewidget.ui" line="164"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
         <location filename="../ui/selectgenomewidget.ui" line="103"/>
         <source>remove genome</source>
         <translation>Удалить геном</translation>
@@ -2256,14 +2287,6 @@ density: %L2
         <location filename="../ui/selectgenomewidget.ui" line="161"/>
         <source>configure</source>
         <translation>Настроить</translation>
-    </message>
-    <message>
-        <location filename="../ui/selectgenomewidget.ui" line="74"/>
-        <location filename="../ui/selectgenomewidget.ui" line="106"/>
-        <location filename="../ui/selectgenomewidget.ui" line="138"/>
-        <location filename="../ui/selectgenomewidget.ui" line="164"/>
-        <source>...</source>
-        <translation>...</translation>
     </message>
 </context>
 <context>
@@ -2295,6 +2318,11 @@ density: %L2
         <translation>Разрешить финальное преобразование</translation>
     </message>
     <message>
+        <location filename="../ui/selecttrianglewidget.ui" line="99"/>
+        <source>final</source>
+        <translation>Финал</translation>
+    </message>
+    <message>
         <location filename="../ui/selecttrianglewidget.ui" line="119"/>
         <source>probability that this function is chosen</source>
         <translation>Вероятность того, что эта функция выбрана</translation>
@@ -2309,18 +2337,13 @@ density: %L2
         <source>remove the selected triangle</source>
         <translation>Удалить выделенный треугольник</translation>
     </message>
-    <message>
-        <location filename="../ui/selecttrianglewidget.ui" line="99"/>
-        <source>final</source>
-        <translation>Финал</translation>
-    </message>
 </context>
 <context>
     <name>SheepLoopWidget</name>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="14"/>
         <source>SheepLoopWidget</source>
-        <translation type="unfinished"></translation>
+        <translation>Виджет овечьих петель</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="37"/>
@@ -2332,12 +2355,12 @@ density: %L2
         <location filename="../ui/sheeploopwidget.ui" line="40"/>
         <location filename="../ui/sheeploopwidget.ui" line="663"/>
         <source>genome</source>
-        <translation>геном</translation>
+        <translation>Геном</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="53"/>
         <source>first keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation>первый ключевой кадр</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="78"/>
@@ -2347,7 +2370,7 @@ density: %L2
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="91"/>
         <source>last keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation>Последний ключевой кадр</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="120"/>
@@ -2383,23 +2406,24 @@ density: %L2
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="186"/>
         <source>frames per loop</source>
-        <translation type="unfinished"></translation>
+        <translation>Кадров в цикле</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="202"/>
         <source>loops</source>
-        <translation type="unfinished"></translation>
+        <translation>Циклы</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="215"/>
         <source>rotation loops</source>
-        <translation type="unfinished"></translation>
+        <translation>Чередование циклов</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="231"/>
         <source>sequence - rotate animated xforms and interpolate adjacent genomes
 animate - time based interpolation of adjacent genomes</source>
-        <translation type="unfinished"></translation>
+        <translation>Последовательность - вращение анимированных xforms и интерполирование соседних геномов
+Анимация - время интерполяции на основе соседних геномов</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="236"/>
@@ -2415,39 +2439,39 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="270"/>
         <source>stagger</source>
-        <translation type="unfinished"></translation>
+        <translation>Колебаться</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="283"/>
         <source>fractional overlap of xform interpolation</source>
-        <translation type="unfinished"></translation>
+        <translation>Незначительное перекрытие интерполяции xform</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="302"/>
         <source>interpolation curve for this genome in the animation sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерполяция кривой  для этого генома в анимационной последовательности</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="305"/>
         <source>interp curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерп. кривой</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="318"/>
         <source>how flames change over time</source>
-        <translation type="unfinished"></translation>
+        <translation>Как пламя меняется с течением времени</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="322"/>
         <location filename="../ui/sheeploopwidget.ui" line="361"/>
         <location filename="../ui/sheeploopwidget.ui" line="436"/>
         <source>linear</source>
-        <translation>линейный</translation>
+        <translation>Линейный</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="327"/>
         <source>smooth</source>
-        <translation>гладкий</translation>
+        <translation>Гладкий</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="341"/>
@@ -2467,17 +2491,17 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="366"/>
         <source>log</source>
-        <translation>лог</translation>
+        <translation>Лог</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="371"/>
         <source>compat</source>
-        <translation type="unfinished"></translation>
+        <translation>Совместимость</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="376"/>
         <source>older</source>
-        <translation>старее</translation>
+        <translation>Старее</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="384"/>
@@ -2492,12 +2516,12 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="401"/>
         <source>hsv</source>
-        <translation type="unfinished"></translation>
+        <translation>HSV</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="406"/>
         <source>sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Развёртка</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="414"/>
@@ -2507,7 +2531,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="427"/>
         <source>interpolation between palette entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерполяция между записями палитр</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="431"/>
@@ -2523,7 +2547,8 @@ animate - time based interpolation of adjacent genomes</source>
         <location filename="../ui/sheeploopwidget.ui" line="488"/>
         <source>number of time steps per batch. this many
    interpolated control points are used per batch and accumulated</source>
-        <translation type="unfinished"></translation>
+        <translation>Число временных шагов на дозу. Сколько раз использовано
+и накоплено интерполированных контрольных точек на дозу</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="492"/>
@@ -2563,7 +2588,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="597"/>
         <source>exp</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспонента</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="605"/>
@@ -2578,7 +2603,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="628"/>
         <source>exponent</source>
-        <translation>экспонента</translation>
+        <translation>Экспонента</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="641"/>
@@ -2598,7 +2623,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="697"/>
         <source>animate this transform in the electricsheep loop</source>
-        <translation type="unfinished"></translation>
+        <translation>Анимировать это преобразование в петлю с электроовцой</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="727"/>
@@ -2608,7 +2633,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="730"/>
         <source>+</source>
-        <translation></translation>
+        <translation>+</translation>
     </message>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="737"/>
@@ -2618,7 +2643,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/sheeploopwidget.ui" line="740"/>
         <source>-</source>
-        <translation></translation>
+        <translation>-</translation>
     </message>
 </context>
 <context>
@@ -2644,32 +2669,32 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="70"/>
         <source>x</source>
-        <translation></translation>
+        <translation>x</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="98"/>
         <source>y</source>
-        <translation></translation>
+        <translation>y</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="120"/>
         <source>O:</source>
-        <translation></translation>
+        <translation>O:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="207"/>
         <source>X:</source>
-        <translation></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="294"/>
         <source>Y:</source>
-        <translation></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="404"/>
         <source>rect</source>
-        <translation type="unfinished"></translation>
+        <translation>прям</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="426"/>
@@ -2684,32 +2709,32 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="482"/>
         <source>a:</source>
-        <translation></translation>
+        <translation>a:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="535"/>
         <source>d:</source>
-        <translation></translation>
+        <translation>d:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="588"/>
         <source>b:</source>
-        <translation></translation>
+        <translation>b:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="641"/>
         <source>e:</source>
-        <translation></translation>
+        <translation>e:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="694"/>
         <source>c:</source>
-        <translation></translation>
+        <translation>c:</translation>
     </message>
     <message>
         <location filename="../ui/trianglecoordswidget.ui" line="747"/>
         <source>f:</source>
-        <translation></translation>
+        <translation>f:</translation>
     </message>
 </context>
 <context>
@@ -2773,7 +2798,7 @@ animate - time based interpolation of adjacent genomes</source>
     <message>
         <location filename="../ui/variationswidget.ui" line="38"/>
         <source>+</source>
-        <translation></translation>
+        <translation>+</translation>
     </message>
 </context>
 <context>
@@ -2812,6 +2837,51 @@ animate - time based interpolation of adjacent genomes</source>
 <context>
     <name>ViewerPresetsWidget</name>
     <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="17"/>
+        <source>Viewer Presets</source>
+        <translation>Профили просмотра</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="32"/>
+        <source>add</source>
+        <translation>Добавить</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="35"/>
+        <source>+</source>
+        <translation>+</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="52"/>
+        <source>remove</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="55"/>
+        <source>-</source>
+        <translation>-</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="72"/>
+        <source>update preset</source>
+        <translation>Обновить профиль</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="75"/>
+        <source>&lt;&gt;</source>
+        <translation>&lt;&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="86"/>
+        <source>move up</source>
+        <translation>Сдвинуть вверх</translation>
+    </message>
+    <message>
+        <location filename="../ui/viewerpresetswidget.ui" line="103"/>
+        <source>move down</source>
+        <translation>Сдвинуть вниз</translation>
+    </message>
+    <message>
         <location filename="../src/viewerpresetswidget.cpp" line="51"/>
         <source>Add a new preset</source>
         <translation>Добавить новый профиль</translation>
@@ -2826,51 +2896,6 @@ animate - time based interpolation of adjacent genomes</source>
         <location filename="../src/viewerpresetswidget.cpp" line="75"/>
         <source>Rename preset</source>
         <translation>Переименовать профиль</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="17"/>
-        <source>Viewer Presets</source>
-        <translation>Профили просмотра</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="32"/>
-        <source>add</source>
-        <translation>Добавить</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="35"/>
-        <source>+</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="52"/>
-        <source>remove</source>
-        <translation>Удалить</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="55"/>
-        <source>-</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="72"/>
-        <source>update preset</source>
-        <translation>Обновить профиль</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="75"/>
-        <source>&lt;&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="86"/>
-        <source>move up</source>
-        <translation>Сдвинуть вверх</translation>
-    </message>
-    <message>
-        <location filename="../ui/viewerpresetswidget.ui" line="103"/>
-        <source>move down</source>
-        <translation>Сдвинуть вниз</translation>
     </message>
 </context>
 </TS>
