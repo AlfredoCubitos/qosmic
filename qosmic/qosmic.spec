@@ -41,5 +41,5 @@ popd
 %doc %{name}/README* %{name}/changes.txt %{name}/scripts
 %{_bindir}/*
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/pixmaps/%{name}icon.xpm
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/%{name}/translations/*.qm
