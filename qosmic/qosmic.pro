@@ -16,8 +16,10 @@ TRANSDIR = $$SHARED/qosmic/translations
 
 
 ################################################################################
-## Icons are installed in $$SHARED/pixmaps
-ICONSDIR = $$SHARED/pixmaps
+## Icons are installed in $$SHARED/icons/hicolor/*/apps
+ICONS16DIR = $$SHARED/icons/hicolor/16x16/apps
+ICONS32DIR = $$SHARED/icons/hicolor/32x32/apps
+ICONS48DIR = $$SHARED/icons/hicolor/48x48/apps
 
 
 ################################################################################
@@ -129,9 +131,13 @@ install_locale {
 
 ## add icons to the install set
 install_icons {
-	icons.files = icons/qosmicicon.xpm
-	icons.path = $$ICONSDIR
-	INSTALLS += icons
+	icons16.files = icons/hicolor/16x16/apps/qosmic.png
+	icons16.path = $$ICONS16DIR
+	icons32.files = icons/hicolor/32x32/apps/qosmic.png
+	icons32.path = $$ICONS32DIR
+	icons48.files = icons/hicolor/48x48/apps/qosmic.png
+	icons48.path = $$ICONS48DIR
+	INSTALLS += icons16 icons32 icons48
 }
 
 ## add the qosmic.desktop file to the install set
