@@ -587,7 +587,7 @@ flam3_palettes=%5</translation>
         <location filename="../ui/editmodeselectorwidget.ui" line="476"/>
         <location filename="../ui/editmodeselectorwidget.ui" line="761"/>
         <source>circum</source>
-        <translation type="unfinished"></translation>
+        <translation>Přibližně</translation>
     </message>
     <message>
         <location filename="../ui/editmodeselectorwidget.ui" line="481"/>
@@ -1289,7 +1289,7 @@ filtru s alespoň touto šířkou na všechny body</translation>
     <message>
         <location filename="../src/mainviewer.cpp" line="51"/>
         <source>fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Celá obrazovka</translation>
     </message>
     <message>
         <location filename="../src/mainviewer.cpp" line="63"/>
