@@ -22,6 +22,7 @@
 #include <QTranslator>
 #include <QFileInfo>
 #include <QLibraryInfo>
+#include <QDebug>
 
 #include "qosmic.h"
 #include "logger.h"
@@ -43,31 +44,21 @@ int main(int argc, char* argv[])
 	logInfo(QString("main() : Qosmic (version %1)").arg(QOSMIC_VERSION));
 
 	// Load translations if necessary
-	QTranslator translator;
-	{
-		QString locale = QLocale::system().name();
-        logInfo("main() : system locale is %s", locale.toLatin1().constData());
-		QString qmDir(QOSMIC_TRANSDIR);
-		QString qmFile(QString("qosmic_") + locale);
 
-		if (translator.load(qmFile, qmDir))
-		{
-			logInfo(QString("main() : installing translations for %1").arg(locale));
-			app.installTranslator(&translator);
-		}
-		else
-		{
-			logInfo(QString("main() : no translations found for locale %1").arg(locale));
-			logInfo("main() : using default locale");
-		}
-	}
+    QTranslator translator;
+    QString locale = QLocale::system().name();
+    translator.load(QString(":ts/qosmic_") + locale);
+    app.installTranslator(&translator);
 
-	QTranslator qttranslator;
+
+QTranslator qttranslator;
 	{
 		QString locale = QLocale::system().name();
         logInfo("main() : system locale is %s", locale.toLatin1().constData());
 		QString qmDir(QLibraryInfo::location(QLibraryInfo::TranslationsPath));
 		QString qmFile(QString("qt_") + locale);
+
+
 
 		if (qttranslator.load(qmFile, qmDir))
 		{
@@ -79,7 +70,10 @@ int main(int argc, char* argv[])
 			logInfo(QString("main() : no qt translations found for locale %1").arg(locale));
 			logInfo("main() : using default locale");
 		}
-	}
+    }
+
+
+
 
 	if (!QFileInfo(getenv("flam3_palettes")).exists())
 	{

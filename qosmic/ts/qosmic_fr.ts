@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr">
+<TS version="2.1" language="fr">
 <context>
     <name>AdjustSceneWidget</name>
-    <message>
-        <source>Adjust Scene</source>
-        <translation type="obsolete">Ajuster La Scène</translation>
-    </message>
-    <message>
-        <source>scale</source>
-        <translation type="obsolete">échelle</translation>
-    </message>
     <message>
         <location filename="../ui/adjustscenewidget.ui" line="26"/>
         <source>Scene Settings</source>
@@ -70,14 +62,6 @@
         <location filename="../ui/adjustscenewidget.ui" line="179"/>
         <source>preview iterations</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>grid color</source>
-        <translation type="obsolete">couleur de grille</translation>
-    </message>
-    <message>
-        <source>background</source>
-        <translation type="obsolete">arrière plan</translation>
     </message>
 </context>
 <context>
@@ -349,27 +333,11 @@ d&apos;arrière plan</translation>
         <source>opacity</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source> 2 or more means rotational
- 1 means identity, ie no symmetry
- 0 means pick a random symmetry (maybe none)
--1 means bilateral (reflection)
--2 or less means rotational and reflective</source>
-        <translation type="obsolete">2 de plus pour la rotation
-1 pour l&apos;identité (ne symétrie)
-0 pour la symétrie aléatoires
--1 pour bilatéral (reflet)
--2 de moin pour la rotation et reflet</translation>
-    </message>
-    <message>
-        <source>symmetry</source>
-        <translation type="obsolete">symétrie</translation>
-    </message>
 </context>
 <context>
     <name>CoreApp</name>
     <message>
-        <location filename="../src/qosmic.cpp" line="104"/>
+        <location filename="../src/qosmic.cpp" line="120"/>
         <source>Error: No palettes file found at:
 %1
 %2
@@ -385,7 +353,7 @@ flam3_palettes=/some/path-to/flam3-palettes.xml qosmic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="120"/>
+        <location filename="../src/qosmic.cpp" line="136"/>
         <source>Qosmic %1
 Usage: qosmic [flam3 file]
 
@@ -397,7 +365,7 @@ flam3_palettes=%5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="144"/>
+        <location filename="../src/qosmic.cpp" line="160"/>
         <source>Couldn&apos;t load file %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -405,8 +373,79 @@ flam3_palettes=%5</source>
 <context>
     <name>DirectoryViewWidget</name>
     <message>
-        <location filename="../src/directoryviewwidget.cpp" line="89"/>
+        <location filename="../src/directoryviewwidget.cpp" line="31"/>
+        <location filename="../src/directoryviewwidget.cpp" line="235"/>
+        <source>directoryview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="33"/>
+        <location filename="../src/directoryviewwidget.cpp" line="236"/>
+        <source>lastdirectory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="35"/>
+        <location filename="../src/directoryviewwidget.cpp" line="240"/>
+        <source>sorttype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="36"/>
+        <location filename="../src/directoryviewwidget.cpp" line="239"/>
+        <source>sortorder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="37"/>
+        <location filename="../src/directoryviewwidget.cpp" line="242"/>
+        <source>showhidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="38"/>
+        <location filename="../src/directoryviewwidget.cpp" line="241"/>
+        <source>viewtype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="90"/>
         <source>Select a directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="237"/>
+        <source>iconsize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="238"/>
+        <source>dirhistory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="243"/>
+        <source>detailedviewstate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="305"/>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="306"/>
+        <source>Short View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="307"/>
+        <source>Detailed View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="316"/>
+        <source>Show Hidden Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -677,98 +716,11 @@ flam3_palettes=%5</source>
     </message>
 </context>
 <context>
-    <name>EditTriangleWidget</name>
-    <message>
-        <source>center on</source>
-        <translation type="obsolete">centre</translation>
-    </message>
-    <message>
-        <source>origin</source>
-        <translation type="obsolete">origin</translation>
-    </message>
-    <message>
-        <source>triangle</source>
-        <translation type="obsolete">triangle</translation>
-    </message>
-    <message>
-        <source>X</source>
-        <translation type="obsolete">X</translation>
-    </message>
-    <message>
-        <source>mark</source>
-        <translation type="obsolete">marquer</translation>
-    </message>
-    <message>
-        <source>O</source>
-        <translation type="obsolete">O</translation>
-    </message>
-    <message>
-        <source>Y</source>
-        <translation type="obsolete">Y</translation>
-    </message>
-    <message>
-        <source>rotate</source>
-        <translation type="obsolete">rotation</translation>
-    </message>
-    <message>
-        <source>scale</source>
-        <translation type="obsolete">échelle</translation>
-    </message>
-    <message>
-        <source>move</source>
-        <translation type="obsolete">déplacez</translation>
-    </message>
-    <message>
-        <source>move down</source>
-        <translation type="obsolete">déplacer en bas</translation>
-    </message>
-    <message>
-        <source>move up</source>
-        <translation type="obsolete">déplacer en haut</translation>
-    </message>
-    <message>
-        <source>flip</source>
-        <translation type="obsolete">flipper</translation>
-    </message>
-    <message>
-        <source>Selection</source>
-        <translation type="obsolete">Sélecteur</translation>
-    </message>
-    <message>
-        <source>triangles</source>
-        <translation type="obsolete">triangles</translation>
-    </message>
-    <message>
-        <source>nodes</source>
-        <translation type="obsolete">nœuds</translation>
-    </message>
-    <message>
-        <source>grid</source>
-        <translation type="obsolete">grille</translation>
-    </message>
-    <message>
-        <source>background</source>
-        <translation type="obsolete">arrière plan</translation>
-    </message>
-</context>
-<context>
     <name>FigureEditor</name>
     <message>
         <location filename="../src/xfedit.cpp" line="50"/>
         <source>Edit Triangle</source>
         <translation type="unfinished">Modifier de Triangle</translation>
-    </message>
-    <message>
-        <source>Add Triangle</source>
-        <translation type="obsolete">Ajouter de Triangle</translation>
-    </message>
-    <message>
-        <source>Duplicate Triangle</source>
-        <translation type="obsolete">Dupliquer de Triangle</translation>
-    </message>
-    <message>
-        <source>Remove Triangle</source>
-        <translation type="obsolete">Supprimer de Triangle</translation>
     </message>
     <message>
         <location filename="../src/xfedit.cpp" line="52"/>
@@ -839,10 +791,6 @@ density: %L2
         <translation type="unfinished">transform finale: %1
 densité: %L2
 </translation>
-    </message>
-    <message>
-        <source>Rescale</source>
-        <translation type="obsolete">Echelle automatique</translation>
     </message>
 </context>
 <context>
@@ -951,10 +899,6 @@ densité: %L2
         <location filename="../ui/imgsettingswidget.ui" line="207"/>
         <source>shape of the spatial filter</source>
         <translation type="unfinished">forme du filtre spatial</translation>
-    </message>
-    <message>
-        <source>shape</source>
-        <translation type="obsolete">forme</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="210"/>
@@ -1078,10 +1022,6 @@ densité: %L2
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>temporal samples</source>
-        <translation type="obsolete">échantillons temporale</translation>
-    </message>
-    <message>
         <location filename="../ui/imgsettingswidget.ui" line="312"/>
         <source>density estimation parameters for blurring low density hits</source>
         <translation type="unfinished"></translation>
@@ -1116,12 +1056,6 @@ densité: %L2
         <location filename="../ui/imgsettingswidget.ui" line="401"/>
         <source>estimator min</source>
         <translation type="unfinished">minimum d&apos;estimation</translation>
-    </message>
-    <message>
-        <source>the genome symmetry group
-1 = no symmetry, 0 = random</source>
-        <translation type="obsolete">symétrie de genome
-1 = ne symétrie, 0 = aléatoire</translation>
     </message>
     <message>
         <location filename="../ui/imgsettingswidget.ui" line="545"/>
@@ -1243,10 +1177,6 @@ densité: %L2
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Viewer Presets</source>
-        <translation type="obsolete">Paramètres d&apos;Affichage</translation>
-    </message>
-    <message>
         <location filename="../ui/mainpreviewwidget.ui" line="14"/>
         <source>Preview</source>
         <translation type="unfinished">Affichage Inférieur</translation>
@@ -1319,10 +1249,6 @@ densité: %L2
         <source>Save an image</source>
         <translation type="unfinished">Sauvegarder une image</translation>
     </message>
-    <message>
-        <source>Viewer Presets</source>
-        <translation type="obsolete">Paramètres d&apos;Affichage</translation>
-    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -1365,17 +1291,9 @@ densité: %L2
         <translation type="unfinished">Coordonnées</translation>
     </message>
     <message>
-        <source>Edit Triangle</source>
-        <translation type="obsolete">Modifier de Triangle</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="219"/>
         <source>Colors</source>
         <translation type="unfinished">Couleurs</translation>
-    </message>
-    <message>
-        <source>Viewer Presets</source>
-        <translation type="obsolete">Paramètres d&apos;Affichage</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="239"/>
@@ -1423,10 +1341,6 @@ densité: %L2
         <location filename="../src/mainwindow.cpp" line="798"/>
         <source>Reset</source>
         <translation type="unfinished">Recommencer</translation>
-    </message>
-    <message>
-        <source>Ctrl+N</source>
-        <translation type="obsolete">Ctrl+R</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="800"/>
@@ -1515,10 +1429,6 @@ densité: %L2
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ctrl+K</source>
-        <translation type="obsolete">Ctrl+A</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="842"/>
         <source>Stop rendering</source>
         <translation type="unfinished">Arrêtter de Rendrer</translation>
@@ -1529,21 +1439,9 @@ densité: %L2
         <translation type="unfinished">&amp;Flame Aléatoire</translation>
     </message>
     <message>
-        <source>Ctrl+R</source>
-        <translation type="obsolete">Ctrl+F</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="847"/>
         <source>Generate a random xform set</source>
         <translation type="unfinished">Créer un genome aléatoire</translation>
-    </message>
-    <message>
-        <source>Rescale</source>
-        <translation type="obsolete">Echelle automatique</translation>
-    </message>
-    <message>
-        <source>Ctrl+A</source>
-        <translation type="obsolete">Ctrl+E</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="852"/>
@@ -1607,10 +1505,6 @@ densité: %L2
         <location filename="../src/mainwindow.cpp" line="998"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adjust Scene</source>
-        <translation type="obsolete">Ajuster La Scène</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="749"/>
@@ -1678,10 +1572,6 @@ densité: %L2
         <translation type="unfinished">Outils de &amp;Edition</translation>
     </message>
     <message>
-        <source>Show the edit toolbar</source>
-        <translation type="obsolete">Afficher la trousse à outils de edition</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="923"/>
         <source>&amp;About</source>
         <translation type="unfinished">&amp;A propos</translation>
@@ -1742,10 +1632,6 @@ densité: %L2
         <translation type="unfinished">Echelle</translation>
     </message>
     <message>
-        <source>Triangle Editing</source>
-        <translation type="obsolete">Modifier de Triangle</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="1041"/>
         <source>Triangle Variations</source>
         <translation type="unfinished">Variations de Triangle</translation>
@@ -1791,14 +1677,6 @@ densité: %L2
         <translation type="unfinished">Console d&apos;édition de scripts</translation>
     </message>
     <message>
-        <source>Ready</source>
-        <translation type="obsolete">Ok</translation>
-    </message>
-    <message>
-        <source>File loaded</source>
-        <translation type="obsolete">Fichier est ouvert</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="695"/>
         <location filename="../src/mainwindow.cpp" line="1235"/>
         <location filename="../src/mainwindow.cpp" line="1254"/>
@@ -1825,24 +1703,6 @@ densité: %L2
         <translation type="unfinished">Sauvegarder du fichier</translation>
     </message>
     <message>
-        <source>Cannot write file to %1
-</source>
-        <translation type="obsolete">Impossible d&apos;enregistrer le fichier %1
-</translation>
-    </message>
-    <message>
-        <source>Cannot open file %1
-</source>
-        <translation type="obsolete">Erreur lors de l&apos;ouverture du fichier %1
-</translation>
-    </message>
-    <message>
-        <source>Couldn&apos;t parse file %1
-</source>
-        <translation type="obsolete">Imposssible du lecture le fichier %1
-</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.cpp" line="1625"/>
         <source>last undo</source>
         <translation type="unfinished">Dernier Annuler</translation>
@@ -1866,10 +1726,6 @@ densité: %L2
         <location filename="../src/mainwindow.cpp" line="592"/>
         <source>Save a flame</source>
         <translation type="unfinished">Sauvegarder un flame</translation>
-    </message>
-    <message>
-        <source>Save an image</source>
-        <translation type="obsolete">Sauvegarder une image</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="741"/>
@@ -1999,10 +1855,6 @@ densité: %L2
 </context>
 <context>
     <name>MutationWidget</name>
-    <message>
-        <source>clear selected</source>
-        <translation type="obsolete">supprimer la liste</translation>
-    </message>
     <message>
         <location filename="../ui/mutationwidget.ui" line="14"/>
         <source>Mutations</source>
@@ -2251,10 +2103,6 @@ densité: %L2
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>rendering... %1% ( %2 remaining )</source>
-        <translation type="obsolete">rendrer %1% ( %2 de surplus )</translation>
-    </message>
-    <message>
         <location filename="../src/renderthread.cpp" line="545"/>
         <source>rendering... %L1% ( %2 remaining )</source>
         <translation type="unfinished">rendrer %L1% ( %2 de surplus )</translation>
@@ -2278,25 +2126,6 @@ densité: %L2
         <location filename="../src/renderthread.cpp" line="568"/>
         <source>%1 rendered in %2</source>
         <translation type="unfinished">rendrer de %1 en %2</translation>
-    </message>
-</context>
-<context>
-    <name>RenderThread</name>
-    <message>
-        <source>rendering... %1% ( %2 remaining )</source>
-        <translation type="obsolete">rendrer %1% ( %2 de surplus )</translation>
-    </message>
-    <message>
-        <source>%1 rendering stopped</source>
-        <translation type="obsolete">rendrer de %1 finis</translation>
-    </message>
-    <message>
-        <source>%1 rendered in %2 seconds</source>
-        <translation type="obsolete">rendrer de %1 en %2 deux</translation>
-    </message>
-    <message>
-        <source>%1 rendered in %2</source>
-        <translation type="obsolete">rendrer de %1 en %2</translation>
     </message>
 </context>
 <context>
@@ -2383,10 +2212,6 @@ densité: %L2
         <location filename="../ui/scripteditwidget.ui" line="127"/>
         <source>save</source>
         <translation type="unfinished">sauvegarde</translation>
-    </message>
-    <message>
-        <source>stop</source>
-        <translation type="obsolete">terminer</translation>
     </message>
     <message>
         <location filename="../src/scripteditwidget.cpp" line="59"/>
@@ -2550,10 +2375,6 @@ densité: %L2
         <location filename="../ui/selecttrianglewidget.ui" line="163"/>
         <source>remove the selected triangle</source>
         <translation type="unfinished">supprimer de triangle sélectionnée</translation>
-    </message>
-    <message>
-        <source>set this transform as final</source>
-        <translation type="obsolete">Fixer de triangle finale</translation>
     </message>
     <message>
         <location filename="../ui/selecttrianglewidget.ui" line="99"/>

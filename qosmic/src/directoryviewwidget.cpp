@@ -28,14 +28,14 @@ DirectoryViewWidget::DirectoryViewWidget(QWidget* parent)
 {
 	setupUi(this);
 	QSettings s;
-	s.beginGroup("directoryview");
+    s.beginGroup(tr("directoryview"));
 	int icon_size = s.value("iconsize", 48).toInt();
-	path = s.value("lastdirectory", QDir::homePath()).toString();
+    path = s.value(tr("lastdirectory"), QDir::homePath()).toString();
 	histEntries = s.value("dirhistory", QStringList() << path).toStringList();
-	sort_type  = (SortType)s.value("sorttype", NAME).toInt();
-	sort_order = (Qt::SortOrder)s.value("sortorder", Qt::AscendingOrder).toInt();
-	bool show_hidden = s.value("showhidden", false).toBool();
-	view_type = (ViewType)s.value("viewtype", SHORT).toInt();
+    sort_type  = (SortType)s.value(tr("sorttype"), NAME).toInt();
+    sort_order = (Qt::SortOrder)s.value(tr("sortorder"), Qt::AscendingOrder).toInt();
+    bool show_hidden = s.value(tr("showhidden"), false).toBool();
+    view_type = (ViewType)s.value(tr("viewtype"), SHORT).toInt();
 
 	QStringList filters;
 	filters << "*.flam3" << "*.flam" << "*.flame" << "*.lua";
@@ -78,7 +78,7 @@ DirectoryViewWidget::DirectoryViewWidget(QWidget* parent)
 	connect(m_configButton, SIGNAL(clicked()), this, SLOT(configButtonClicked()));
 
 	showHiddenFiles(show_hidden);
-	sortBy(sort_type);
+    sortBy();
 	setViewType(view_type);
 }
 
@@ -231,15 +231,15 @@ void DirectoryViewWidget::closeEvent(QCloseEvent* /*e*/)
 {
 	logInfo("DirectoryViewWidget::closeEvent : saving settings");
 	QSettings s;
-	s.beginGroup("directoryview");
-	s.setValue("lastdirectory", path);
-	s.setValue("iconsize", m_dirListView->iconSize().width());
-	s.setValue("dirhistory", comboListModel->stringList());
-	s.setValue("sortorder", sort_order);
-	s.setValue("sorttype", sort_type);
-	s.setValue("viewtype", view_type);
-	s.setValue("showhidden", (model->filter() & QDir::Hidden) != 0);
-	s.setValue("detailedviewstate", m_treeView->header()->saveState());
+    s.beginGroup(tr("directoryview"));
+    s.setValue(tr("lastdirectory"), path);
+    s.setValue(tr("iconsize"), m_dirListView->iconSize().width());
+    s.setValue(tr("dirhistory"), comboListModel->stringList());
+    s.setValue(tr("sortorder"), sort_order);
+    s.setValue(tr("sorttype"), sort_type);
+    s.setValue(tr("viewtype"), view_type);
+    s.setValue(tr("showhidden"), (model->filter() & QDir::Hidden) != 0);
+    s.setValue(tr("detailedviewstate"), m_treeView->header()->saveState());
 	s.endGroup();
 }
 
@@ -300,32 +300,10 @@ void DirectoryViewWidget::updateHistEntries(const QString& path)
 void DirectoryViewWidget::configButtonClicked()
 {
 	QMenu* popup = new QMenu(this);
-	QMenu* sortmenu = popup->addMenu("Sorting");
-	QAction* nameaction = sortmenu->addAction("By Name");
-	QAction* dateaction = sortmenu->addAction("By Date");
-	QAction* sizeaction = sortmenu->addAction("By Size");
-	QAction* typeaction = sortmenu->addAction("By Type");
-	nameaction->setCheckable(true);
-	dateaction->setCheckable(true);
-	sizeaction->setCheckable(true);
-	typeaction->setCheckable(true);
-	if (sort_type == NAME)
-		nameaction->setChecked(true);
-	else if (sort_type == DATE)
-		dateaction->setChecked(true);
-	else if (sort_type == TYPE)
-		typeaction->setChecked(true);
-	else
-		sizeaction->setChecked(true);
 
-	sortmenu->addSeparator();
-	QAction* orderaction = sortmenu->addAction("Descending");
-	orderaction->setCheckable(true);
-	orderaction->setChecked(sort_order == Qt::DescendingOrder);
-
-	QMenu* viewmenu = popup->addMenu("View");
-	QAction* shorttype = viewmenu->addAction("Short View");
-	QAction* detailtype = viewmenu->addAction("Detailed View");
+    QMenu* viewmenu = popup->addMenu(tr("View"));
+    QAction* shorttype = viewmenu->addAction(tr("Short View"));
+    QAction* detailtype = viewmenu->addAction(tr("Detailed View"));
 	shorttype->setCheckable(true);
 	detailtype->setCheckable(true);
 	if (view_type == SHORT)
@@ -334,50 +312,33 @@ void DirectoryViewWidget::configButtonClicked()
 		detailtype->setChecked(true);
 
 	popup->addSeparator();
-	QAction* hidden = popup->addAction("Show Hidden Files");
+    QAction* hidden = popup->addAction(tr("Show Hidden Files"));
 	hidden->setCheckable(true);
 	hidden->setChecked((model->filter() & QDir::Hidden) != 0);
 
-	connect(popup, SIGNAL(triggered(QAction*)), this, SLOT(configMenuTriggered(QAction*)));
-	connect(viewmenu, SIGNAL(triggered(QAction*)), this, SLOT(configMenuTriggered(QAction*)));
-	connect(sortmenu, SIGNAL(triggered(QAction*)), this, SLOT(configMenuTriggered(QAction*)));
-
+    connect(popup, SIGNAL(triggered(QAction*)), this, SLOT(hiddenAction(QAction*)));
+    connect(shorttype, SIGNAL(triggered(bool)), this, SLOT(shortViewAction()));
+    connect(detailtype, SIGNAL(triggered(bool)), this, SLOT(detailedViewAction()));
 	popup->exec(m_configButton->mapToGlobal(QPoint(0,0)));
 
 	delete popup;
 }
 
-void DirectoryViewWidget::configMenuTriggered(QAction* action)
+void DirectoryViewWidget::hiddenAction(QAction* action)
+    {
+        bool showhidden = action->isChecked();
+        showHiddenFiles(showhidden);
+        sortBy();
+    }
+
+void DirectoryViewWidget::shortViewAction()
 {
-	if (action->text() == "Descending")
-	{
-		Qt::SortOrder order = Qt::AscendingOrder;
-		if (action->isChecked())
-			order = Qt::DescendingOrder;
-		setSortOrder(order);
-	}
-	else if (action->text() == "Show Hidden Files")
-	{
-		bool showhidden = action->isChecked();
-		showHiddenFiles(showhidden);
-	}
-	else if (action->text() == "Short View")
-		setViewType(SHORT);
-	else if (action->text() == "Detailed View")
+        setViewType(SHORT);
+}
+
+void DirectoryViewWidget::detailedViewAction()
+{
 		setViewType(DETAILED);
-	else
-	{
-		SortType type;
-		if (action->text() == "By Date")
-			type = DATE;
-		else if (action->text() == "By Size")
-			type = SIZE;
-		else if (action->text() == "By Type")
-			type = TYPE;
-		else
-			type = NAME;
-		sortBy(type);
-	}
 }
 
 void DirectoryViewWidget::showHiddenFiles(bool flag)
@@ -391,9 +352,10 @@ void DirectoryViewWidget::showHiddenFiles(bool flag)
 	}
 }
 
-void DirectoryViewWidget::sortBy(SortType type)
+void DirectoryViewWidget::sortBy()
 {
-	sort_type = type;
+
+
 	if (view_type == DETAILED)
 	{
 		QString header;
@@ -435,7 +397,7 @@ Qt::SortOrder DirectoryViewWidget::sortOrder() const
 void DirectoryViewWidget::setSortOrder(Qt::SortOrder order)
 {
 	sort_order = order;
-	sortBy(sort_type);
+    sortBy();
 }
 
 void DirectoryViewWidget::setViewType(DirectoryViewWidget::ViewType type)
@@ -449,7 +411,7 @@ void DirectoryViewWidget::setViewType(DirectoryViewWidget::ViewType type)
 		m_dirListView->blockSignals(false);
 		m_treeView->setVisible(false);
 		m_treeView->blockSignals(true);
-		sortBy(sort_type);
+        sortBy();
 		break;
 	case DETAILED:
 		m_treeView->setVisible(true);

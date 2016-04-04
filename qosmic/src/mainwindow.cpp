@@ -1653,19 +1653,22 @@ void MainWindow::runSheepLoop(bool flag)
 {
 	static bool run_sequence; // signal this routine to start/stop sequence
 
-	if (!m_previewWidget->isVisible())
-		return;
+
+
+    if (!m_previewWidget->isVisible())
+        qobject_cast<QDockWidget*>(m_previewWidget->parentWidget())->show();
+        //return;
 
 	if (flag)
 	{
 		int dncp = 0;
-		flam3_genome* sheep = m_sheepLoopWidget->createSheepLoop(dncp);
+        flam3_genome* sheep = m_sheepLoopWidget->createSheepLoop(dncp);
 
 		if (sheep != NULL)
 		{
 			// resize the request list if neccessary
 			while (m_sheep_requests.size() > dncp)
-				delete m_sheep_requests.takeLast();
+                delete m_sheep_requests.takeLast();
 
 			run_sequence = true;
 			for (int i = 0 ; run_sequence && i < dncp ; i++)

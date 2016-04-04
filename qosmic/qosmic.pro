@@ -61,7 +61,7 @@ else {
 	## Adjust these variables to set paths and libs without using pkg-config.
 	## The PALETTESDIR must be set to the directory containing the
 	## flam3-palettes.xml file installed by the flam3 package.
-	PALETTESDIR = /usr/share/flam3
+        PALETTESDIR = /usr/share/flam3
 	INCLUDEPATH += /usr/include/libxml2
 	LIBS += -L/usr/lib/libxml2 -lflam3 -lm -ljpeg -lxml2 -llua
 }
@@ -69,7 +69,7 @@ else {
 ################################################################################
 ## Build style flags.  Adding debug enables more verbose logging.
 #CONFIG += release warn_off
-#CONFIG += debug warn_on
+CONFIG += debug warn_on
 
 
 ################################################################################
@@ -330,7 +330,8 @@ SOURCES += \
 
 TRANSLATIONS += ts/qosmic_fr.ts \
                 ts/qosmic_cs.ts \
-                ts/qosmic_ru.ts
+                ts/qosmic_ru.ts \
+                ts/qosmic_de.ts
 
 MOC_DIR = .moc
 OBJECTS_DIR = .obj

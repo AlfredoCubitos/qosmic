@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ru">
 <context>
     <name>AdjustSceneWidget</name>
     <message>
@@ -336,7 +338,7 @@ increases.  -1 = disabled, 0 = no highlights</source>
 <context>
     <name>CoreApp</name>
     <message>
-        <location filename="../src/qosmic.cpp" line="104"/>
+        <location filename="../src/qosmic.cpp" line="120"/>
         <source>Error: No palettes file found at:
 %1
 %2
@@ -363,7 +365,7 @@ xml файл палитр flam3 не был найден.
 flam3_palettes=/некоторый/путь_до/flam3-palettes.xml qosmic</translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="120"/>
+        <location filename="../src/qosmic.cpp" line="136"/>
         <source>Qosmic %1
 Usage: qosmic [flam3 file]
 
@@ -382,7 +384,7 @@ flam3_nthreads=%4
 flam3_palettes=%5</translation>
     </message>
     <message>
-        <location filename="../src/qosmic.cpp" line="144"/>
+        <location filename="../src/qosmic.cpp" line="160"/>
         <source>Couldn&apos;t load file %1</source>
         <translation>Не удалось загрузить файл %1</translation>
     </message>
@@ -414,9 +416,80 @@ flam3_palettes=%5</translation>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../src/directoryviewwidget.cpp" line="89"/>
+        <location filename="../src/directoryviewwidget.cpp" line="31"/>
+        <location filename="../src/directoryviewwidget.cpp" line="235"/>
+        <source>directoryview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="33"/>
+        <location filename="../src/directoryviewwidget.cpp" line="236"/>
+        <source>lastdirectory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="35"/>
+        <location filename="../src/directoryviewwidget.cpp" line="240"/>
+        <source>sorttype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="36"/>
+        <location filename="../src/directoryviewwidget.cpp" line="239"/>
+        <source>sortorder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="37"/>
+        <location filename="../src/directoryviewwidget.cpp" line="242"/>
+        <source>showhidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="38"/>
+        <location filename="../src/directoryviewwidget.cpp" line="241"/>
+        <source>viewtype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="90"/>
         <source>Select a directory</source>
         <translation>Выберите каталог</translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="237"/>
+        <source>iconsize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="238"/>
+        <source>dirhistory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="243"/>
+        <source>detailedviewstate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="305"/>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="306"/>
+        <source>Short View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="307"/>
+        <source>Detailed View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/directoryviewwidget.cpp" line="316"/>
+        <source>Show Hidden Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1715,7 +1788,7 @@ density: %L2
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1236"/>
-        <source>Couldn't open file %1
+        <source>Couldn&apos;t open file %1
 </source>
         <translation>Не удалось открыть файл %1
 </translation>
@@ -1729,7 +1802,7 @@ density: %L2
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1255"/>
-        <source>Couldn't save file %1
+        <source>Couldn&apos;t save file %1
 </source>
         <translation>Не удалось сохранить файл %1
 </translation>

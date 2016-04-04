@@ -71,12 +71,17 @@ class DirectoryViewWidget : public QWidget, private Ui::DirectoryViewWidget
 		void backButtonClicked();
 		void historyIndexChanged(const QString&);
 		void configButtonClicked();
-		void configMenuTriggered(QAction*);
 		void showHiddenFiles(bool);
-		void sortBy(SortType);
+        void sortBy();
 		void detailedViewSortTypeChanged(int, Qt::SortOrder);
 		void zoomInButtonClicked();
 		void zoomOutButtonClicked();
+
+        void hiddenAction(QAction *action);
+        void shortViewAction();
+        void detailedViewAction();
+
+
 
 	private:
 		QFileSystemModel* model;
